@@ -10,7 +10,7 @@
 
     <artifactId>jfree-demos</artifactId>
     <groupId>org.jfree</groupId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <organization>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreesvg</artifactId>
-            <version>3.2</version>
+            <version>3.3</version>
         </dependency>
       
         <!-- OrsonPDF enables PDF export -->
