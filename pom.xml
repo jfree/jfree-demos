@@ -10,7 +10,7 @@
 
     <artifactId>jfree-demos</artifactId>
     <groupId>org.jfree</groupId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <organization>
@@ -20,7 +20,7 @@
     <inceptionYear>2017</inceptionYear>
 
     <description>
-        A collection of various demos for projects at JFree.
+        A collection of demos for projects at JFree and Object Refinery.
     </description>
 
     <url>http://www.jfree.org/</url>
@@ -51,12 +51,17 @@
         </dependency>
         
         <dependency>
+            <groupId>com.object-refinery</groupId>
+            <artifactId>orsoncharts</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreesvg</artifactId>
             <version>3.3</version>
         </dependency>
-      
-        <!-- OrsonPDF enables PDF export -->
+ 
         <dependency>
             <groupId>com.orsonpdf</groupId>
             <artifactId>orsonpdf</artifactId>
