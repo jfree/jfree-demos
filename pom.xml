@@ -10,7 +10,7 @@
 
     <artifactId>jfree-demos</artifactId>
     <groupId>org.jfree</groupId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <organization>
