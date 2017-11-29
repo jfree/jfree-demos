@@ -74,7 +74,7 @@ public class PDFTimeSeriesChartDemo1 {
 
         JFreeChart chart = ChartFactory.createTimeSeriesChart(
             "International Coffee Organisation : Coffee Prices",
-            null, "US cents/lb", dataset, true, false, false);
+            null, "US cents/lb", dataset);
 
         String fontName = "Palatino";
         chart.getTitle().setFont(new Font(fontName, Font.BOLD, 18));
@@ -92,8 +92,6 @@ public class PDFTimeSeriesChartDemo1 {
         plot.getDomainAxis().setTickLabelFont(new Font(fontName, Font.PLAIN, 12));
         plot.getRangeAxis().setLabelFont(new Font(fontName, Font.BOLD, 14));
         plot.getRangeAxis().setTickLabelFont(new Font(fontName, Font.PLAIN, 12));
-        plot.setRangeGridlinePaint(Color.red);
-        plot.setDomainGridlinePaint(Color.red);
         chart.getLegend().setItemFont(new Font(fontName, Font.PLAIN, 14));
         chart.getLegend().setFrame(BlockBorder.NONE);
         chart.getLegend().setHorizontalAlignment(HorizontalAlignment.CENTER);

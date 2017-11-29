@@ -92,8 +92,7 @@ public class PDFBarChartDemo1 {
 
         // create the chart...
         JFreeChart chart = ChartFactory.createLineChart(
-            "Statistical Bar Chart Demo 1", "Type", "Value", dataset, 
-            PlotOrientation.VERTICAL, true, false, false);
+            "Statistical Bar Chart Demo 1", "Type", "Value", dataset);
 
         CategoryPlot plot = (CategoryPlot) chart.getPlot();
 
@@ -105,7 +104,7 @@ public class PDFBarChartDemo1 {
         // customise the renderer...
         StatisticalBarRenderer renderer = new StatisticalBarRenderer();
         renderer.setDrawBarOutline(false);
-        renderer.setErrorIndicatorPaint(Color.black);
+        renderer.setErrorIndicatorPaint(Color.BLACK);
         renderer.setIncludeBaseInRange(false);
         plot.setRenderer(renderer);
 
@@ -120,9 +119,9 @@ public class PDFBarChartDemo1 {
                 ItemLabelAnchor.INSIDE6, TextAnchor.BOTTOM_CENTER));
 
         // set up gradient paints for series...
-        GradientPaint gp0 = new GradientPaint(0.0f, 0.0f, Color.blue,
+        GradientPaint gp0 = new GradientPaint(0.0f, 0.0f, Color.BLUE,
                 0.0f, 0.0f, new Color(0, 0, 64));
-        GradientPaint gp1 = new GradientPaint(0.0f, 0.0f, Color.green,
+        GradientPaint gp1 = new GradientPaint(0.0f, 0.0f, Color.GREEN,
                 0.0f, 0.0f, new Color(0, 64, 0));
         renderer.setSeriesPaint(0, gp0);
         renderer.setSeriesPaint(1, gp1);
