@@ -1,11 +1,11 @@
 /* =====================================================================
- * OrsonPDF : a fast, light-weight PDF library for the Java(tm) platform
+ * JFreePDF : a fast, light-weight PDF library for the Java(tm) platform
  * =====================================================================
  * 
- * (C)opyright 2013-2015, by Object Refinery Limited.  All rights reserved.
+ * (C)opyright 2013-2020, by Object Refinery Limited.  All rights reserved.
  *
  * Project Info:  http://www.object-refinery.com/orsonpdf/index.html
- *
+ * 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *   - Redistributions of source code must retain the above copyright
@@ -33,7 +33,7 @@
  * 
  */
 
-package com.orsonpdf.demo;
+package org.jfree.pdf.demo;
 
 import java.awt.BorderLayout;
 import java.awt.Rectangle;
@@ -43,18 +43,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JComponent;
-import com.orsonpdf.PDFDocument;
-import com.orsonpdf.PDFGraphics2D;
-import com.orsonpdf.Page;
-import java.awt.Graphics2D;
-import java.awt.image.BufferedImage;
+import org.jfree.pdf.PDFDocument;
+import org.jfree.pdf.PDFGraphics2D;
+import org.jfree.pdf.PDFHints;
+import org.jfree.pdf.Page;
 
 /**
- * Renders a Swing component to a PDF file, but via an image.
+ * Renders a Swing component to a PDF file.
  */
-public class PDFSwingComponentDemo2 extends JFrame {
+public class PDFSwingComponentDemo1 extends JFrame {
     
-    public PDFSwingComponentDemo2(String title) {
+    public PDFSwingComponentDemo1(String title) {
         super(title);
         JPanel content = new JPanel(new BorderLayout());
         content.add(new JButton("Hello"));
@@ -69,15 +68,10 @@ public class PDFSwingComponentDemo2 extends JFrame {
         demo.setVisible(true);
         PDFDocument pdf = new PDFDocument();
         JComponent c = (JComponent) demo.getContentPane();
-        int w = c.getWidth();
-        int h = c.getHeight();
-        BufferedImage img = new BufferedImage(w, h, 
-                BufferedImage.TYPE_INT_ARGB);
-        Graphics2D img2 = img.createGraphics();
-        demo.getContentPane().paint(img2);
-        Page page = pdf.createPage(new Rectangle(w, h));
+        Page page = pdf.createPage(new Rectangle(c.getWidth(), c.getHeight()));
         PDFGraphics2D g2 = page.getGraphics2D();
-        g2.drawImage(img, 0, 0, null); 
-        pdf.writeToFile(new File("PDFSwingComponentDemo2.pdf"));
+        g2.setRenderingHint(PDFHints.KEY_DRAW_STRING_TYPE, PDFHints.VALUE_DRAW_STRING_TYPE_VECTOR);
+        demo.getContentPane().paint(g2); 
+        pdf.writeToFile(new File("PDFSwingComponentDemo1.pdf"));
     }
 }

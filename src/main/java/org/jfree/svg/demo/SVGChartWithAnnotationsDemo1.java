@@ -29,7 +29,7 @@
  * 
  */
 
-package org.jfree.graphics2d.svg.demo;
+package org.jfree.svg.demo;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -62,8 +62,8 @@ import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.time.Year;
 import org.jfree.data.xy.XYDataset;
-import org.jfree.graphics2d.svg.SVGGraphics2D;
-import org.jfree.graphics2d.svg.SVGUtils;
+import org.jfree.svg.SVGGraphics2D;
+import org.jfree.svg.SVGUtils;
 
 /**
  * A demo/test for a pie chart.

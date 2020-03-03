@@ -1,11 +1,11 @@
-/* ==================
- * PieChartDemo1.java
- * ==================
+/* =====================================================================
+ * JFreePDF : a fast, light-weight PDF library for the Java(tm) platform
+ * =====================================================================
+ * 
+ * (C)opyright 2013-2020, by Object Refinery Limited.  All rights reserved.
  *
- * (C) Copyright 2003-2017, by Object Refinery Limited.
- *
- * Project Info:  http://www.jfree.org/jfreechart/index.html
- *
+ * Project Info:  http://www.object-refinery.com/orsonpdf/index.html
+ * 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *   - Redistributions of source code must retain the above copyright
@@ -27,60 +27,41 @@
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
+ * 
+ * Note that the above terms apply to the demo source only, and not the 
+ * OrsonPDF library.
+ * 
  */
 
-package org.jfree.chart.demo;
+package org.jfree.pdf.demo;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GradientPaint;
 import java.awt.Point;
 import java.awt.RadialGradientPaint;
+import java.awt.Rectangle;
 import java.awt.geom.Point2D;
-import javax.swing.JPanel;
-
+import java.io.File;
+import java.io.IOException;
 import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.StandardChartTheme;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.title.TextTitle;
-import org.jfree.chart.ui.ApplicationFrame;
-import org.jfree.chart.ui.HorizontalAlignment;
-import org.jfree.chart.ui.RectangleEdge;
-import org.jfree.chart.ui.RectangleInsets;
-import org.jfree.chart.ui.UIUtils;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
+import org.jfree.chart.ui.HorizontalAlignment;
+import org.jfree.chart.ui.RectangleEdge;
+import org.jfree.pdf.PDFDocument;
+import org.jfree.pdf.PDFGraphics2D;
+import org.jfree.pdf.Page;
 
 /**
- * A simple demonstration application showing how to create a pie chart using
- * data from a {@link DefaultPieDataset}.
+ * A demo/test for a pie chart.
  */
-public class PieChartDemo1 extends ApplicationFrame {
-
-    private static final long serialVersionUID = 1L;
-
-    static {
-        // set a theme using the new shadow generator feature available in
-        // 1.0.14 - for backwards compatibility it is not enabled by default
-        ChartFactory.setChartTheme(new StandardChartTheme("JFree/Shadow",
-                true));
-    }
-
-    /**
-     * Default constructor.
-     *
-     * @param title  the frame title.
-     */
-    public PieChartDemo1(String title) {
-        super(title);
-        setContentPane(createDemoPanel());
-    }
-
+public class PDFPieChartDemo1 {
+    
     /**
      * Creates a sample dataset.
      * 
@@ -107,14 +88,9 @@ public class PieChartDemo1 extends ApplicationFrame {
     private static JFreeChart createChart(PieDataset dataset) {
 
         JFreeChart chart = ChartFactory.createPieChart(
-            "Smart Phones Manufactured / Q3 2011",  // chart title
-            dataset,            // data
-            false,              // no legend
-            true,               // tooltips
-            false               // no URL generation
-        );
+            "Smart Phones Manufactured / Q3 2011", dataset, false, false, 
+            false);
 
-        // set a custom background for the chart
         chart.setBackgroundPaint(new GradientPaint(new Point(0, 0), 
                 new Color(20, 20, 20), new Point(400, 200), Color.DARK_GRAY));
 
@@ -125,21 +101,21 @@ public class PieChartDemo1 extends ApplicationFrame {
         t.setFont(new Font("Arial", Font.BOLD, 26));
 
         PiePlot plot = (PiePlot) chart.getPlot();
+       
         plot.setBackgroundPaint(null);
         plot.setInteriorGap(0.04);
         plot.setOutlineVisible(false);
-
+        plot.setShadowPaint(null);
+        plot.setLabelShadowPaint(null);
+        
         // use gradients and white borders for the section colours
-        plot.setSectionPaint("Others", 
-                createGradientPaint(new Color(200, 200, 255), Color.BLUE));
-        plot.setSectionPaint("Samsung", 
-                createGradientPaint(new Color(255, 200, 200), Color.RED));
-        plot.setSectionPaint("Apple", 
-                createGradientPaint(new Color(200, 255, 200), Color.GREEN));
-        plot.setSectionPaint("Nokia", 
-                createGradientPaint(new Color(200, 255, 200), Color.YELLOW));
+        plot.setSectionPaint("Others", createGradientPaint(new Color(200, 200, 255), Color.BLUE));
+        plot.setSectionPaint("Samsung", createGradientPaint(new Color(255, 200, 200), Color.RED));
+        plot.setSectionPaint("Apple", createGradientPaint(new Color(200, 255, 200), Color.GREEN));
+        plot.setSectionPaint("Nokia", createGradientPaint(new Color(200, 255, 200), Color.YELLOW));
         plot.setDefaultSectionOutlinePaint(Color.WHITE);
         plot.setSectionOutlinesVisible(true);
+        BasicStroke bs = new BasicStroke(2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 1.0f);
         plot.setDefaultSectionOutlineStroke(new BasicStroke(2.0f));
 
         // customise the section label appearance
@@ -178,39 +154,22 @@ public class PieChartDemo1 extends ApplicationFrame {
     }
 
     /**
-     * Creates a panel for the demo (used by SuperDemo.java).
-     *
-     * @return A panel.
-     */
-    public static JPanel createDemoPanel() {
-        JFreeChart chart = createChart(createDataset());
-        chart.setPadding(new RectangleInsets(4, 8, 2, 2));
-        ChartPanel panel = new ChartPanel(chart, false);
-        panel.setMouseWheelEnabled(true);
-        panel.setPreferredSize(new Dimension(600, 300));
-        return panel;
-    }
-
-    /**
-     * Starting point for the demonstration application.
-     *
+     * Starting point for the demo.
+     * 
      * @param args  ignored.
+     * 
+     * @throws IOException 
      */
-    public static void main(String[] args) {
-
-        // ******************************************************************
-        //  More than 150 demo applications are included with the JFreeChart
-        //  Developer Guide...for more information, see:
-        //
-        //  >   http://www.object-refinery.com/jfreechart/guide.html
-        //
-        // ******************************************************************
-
-        PieChartDemo1 demo = new PieChartDemo1("JFreeChart: Pie Chart Demo 1");
-        demo.pack();
-        UIUtils.centerFrameOnScreen(demo);
-        demo.setVisible(true);
+    public static void main(String[] args) throws IOException {
+        JFreeChart chart = createChart(createDataset());
+        PDFDocument pdfDoc = new PDFDocument();
+        pdfDoc.setTitle("PDFPieChartDemo1");
+        pdfDoc.setAuthor("Object Refinery Limited");
+        Page page = pdfDoc.createPage(new Rectangle(612, 468));
+        PDFGraphics2D g2 = page.getGraphics2D();
+        g2.setRenderingHint(JFreeChart.KEY_SUPPRESS_SHADOW_GENERATION, true);
+        chart.draw(g2, new Rectangle(0, 0, 612, 468));
+        File f = new File("PDFPieChartDemo1.pdf");
+        pdfDoc.writeToFile(f);
     }
-
 }
-

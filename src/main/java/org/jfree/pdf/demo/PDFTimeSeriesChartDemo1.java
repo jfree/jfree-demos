@@ -1,8 +1,8 @@
 /* =====================================================================
- * OrsonPDF : a fast, light-weight PDF library for the Java(tm) platform
+ * JFreePDF : a fast, light-weight PDF library for the Java(tm) platform
  * =====================================================================
  * 
- * (C)opyright 2013-2017, by Object Refinery Limited.  All rights reserved.
+ * (C)opyright 2013-2020, by Object Refinery Limited.  All rights reserved.
  *
  * Project Info:  http://www.object-refinery.com/orsonpdf/index.html
  * 
@@ -33,7 +33,7 @@
  * 
  */
 
-package com.orsonpdf.demo;
+package org.jfree.pdf.demo;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -53,10 +53,10 @@ import org.jfree.data.time.TimeSeries;
 import org.jfree.data.time.TimeSeriesCollection;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.chart.ui.HorizontalAlignment;
-import com.orsonpdf.PDFDocument;
-import com.orsonpdf.PDFGraphics2D;
-import com.orsonpdf.PDFHints;
-import com.orsonpdf.Page;
+import org.jfree.pdf.PDFDocument;
+import org.jfree.pdf.PDFGraphics2D;
+import org.jfree.pdf.PDFHints;
+import org.jfree.pdf.Page;
 
 /**
  * A demo for PDF output of a time series chart.

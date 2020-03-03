@@ -31,7 +31,7 @@
  * 
  */
 
-package org.jfree.graphics2d.svg.demo;
+package org.jfree.svg.demo;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -45,8 +45,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-import org.jfree.graphics2d.svg.SVGGraphics2D;
-import org.jfree.graphics2d.svg.SVGUtils;
+import org.jfree.svg.SVGGraphics2D;
+import org.jfree.svg.SVGUtils;
 
 /**
  * This demo shows how to export a Swing UI to SVG.

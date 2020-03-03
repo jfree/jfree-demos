@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2016, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -50,6 +50,7 @@ import com.orsoncharts.axis.LabelOrientation;
 import com.orsoncharts.axis.StandardCategoryAxis3D;
 import com.orsoncharts.data.category.CategoryDataset3D;
 import com.orsoncharts.data.category.StandardCategoryDataset3D;
+import com.orsoncharts.graphics2d.Fit2D;
 import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
 import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
 import com.orsoncharts.label.StandardCategoryLabelGenerator;
@@ -57,7 +58,6 @@ import com.orsoncharts.plot.CategoryPlot3D;
 import com.orsoncharts.renderer.category.StackedBarRenderer3D;
 import com.orsoncharts.table.RectanglePainter;
 import com.orsoncharts.table.StandardRectanglePainter;
-import com.orsoncharts.util.Fit2D;
 
 /**
  * A demo of a 3D stacked bar chart.
@@ -149,7 +149,7 @@ public class StackedBarChart3DDemo3 extends JFrame {
     private static CategoryDataset3D createDataset() {
         
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
         
         dataset.addValue(146, "Survivors", "Women/Children", "1st");
         dataset.addValue(104, "Survivors", "Women/Children", "2nd");

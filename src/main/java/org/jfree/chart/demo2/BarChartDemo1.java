@@ -31,7 +31,7 @@
  * 
  */
 
-package org.jfree.chart.demo;
+package org.jfree.chart.demo2;
 
 import java.awt.Color;
 import java.awt.Dimension;

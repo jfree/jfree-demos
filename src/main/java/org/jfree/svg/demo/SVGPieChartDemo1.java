@@ -1,11 +1,12 @@
-/* =====================================================================
- * OrsonPDF : a fast, light-weight PDF library for the Java(tm) platform
- * =====================================================================
+/* =====================
+ * SVGPieChartDemo1.java
+ * =====================
  * 
- * (C)opyright 2013-2017, by Object Refinery Limited.  All rights reserved.
+ * Copyright (c) 2013-2017, Object Refinery Limited.
+ * All rights reserved.
  *
- * Project Info:  http://www.object-refinery.com/orsonpdf/index.html
- * 
+ * http://www.jfree.org/jfreesvg/index.html
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
  *   - Redistributions of source code must retain the above copyright
@@ -28,18 +29,13 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * 
- * Note that the above terms apply to the demo source only, and not the 
- * OrsonPDF library.
- * 
  */
 
-package com.orsonpdf.demo;
+package org.jfree.svg.demo;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.GradientPaint;
-import java.awt.Point;
 import java.awt.RadialGradientPaint;
 import java.awt.Rectangle;
 import java.awt.geom.Point2D;
@@ -47,20 +43,28 @@ import java.io.File;
 import java.io.IOException;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.StandardChartTheme;
+//import org.jfree.chart.drawable.GradientPainter;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.title.TextTitle;
-import org.jfree.data.general.DefaultPieDataset;
-import org.jfree.data.general.PieDataset;
 import org.jfree.chart.ui.HorizontalAlignment;
 import org.jfree.chart.ui.RectangleEdge;
-import com.orsonpdf.PDFDocument;
-import com.orsonpdf.PDFGraphics2D;
-import com.orsonpdf.Page;
+import org.jfree.data.general.DefaultPieDataset;
+import org.jfree.data.general.PieDataset;
+import org.jfree.svg.SVGGraphics2D;
+import org.jfree.svg.SVGUtils;
 
 /**
  * A demo/test for a pie chart.
  */
-public class PDFPieChartDemo1 {
+public class SVGPieChartDemo1 {
+    
+    static {
+        // set a theme using the new shadow generator feature available in
+        // 1.0.14 - for backwards compatibility it is not enabled by default
+        ChartFactory.setChartTheme(new StandardChartTheme("JFree/Shadow",
+                true));
+    }
     
     /**
      * Creates a sample dataset.
@@ -88,11 +92,14 @@ public class PDFPieChartDemo1 {
     private static JFreeChart createChart(PieDataset dataset) {
 
         JFreeChart chart = ChartFactory.createPieChart(
-            "Smart Phones Manufactured / Q3 2011", dataset, false, false, 
-            false);
+            "Smart Phones Manufactured / Q3 2011",  // chart title
+            dataset);
+        chart.removeLegend();
 
-        chart.setBackgroundPaint(new GradientPaint(new Point(0, 0), 
-                new Color(20, 20, 20), new Point(400, 200), Color.DARK_GRAY));
+        // set a custom background for the chart
+//        chart.setBackgroundPainter(new GradientPainter(new Color(20, 20, 20), 
+//                RectangleAnchor.TOP_LEFT, Color.DARK_GRAY, 
+//                RectangleAnchor.BOTTOM_RIGHT));
 
         // customise the title position and font
         TextTitle t = chart.getTitle();
@@ -101,13 +108,10 @@ public class PDFPieChartDemo1 {
         t.setFont(new Font("Arial", Font.BOLD, 26));
 
         PiePlot plot = (PiePlot) chart.getPlot();
-       
-        plot.setBackgroundPaint(null);
+//        plot.setBackgroundPainter(null);
         plot.setInteriorGap(0.04);
-        plot.setOutlineVisible(false);
-        plot.setShadowPaint(null);
-        plot.setLabelShadowPaint(null);
-        
+//        plot.setBorderPainter(null);
+
         // use gradients and white borders for the section colours
         plot.setSectionPaint("Others", createGradientPaint(new Color(200, 200, 255), Color.BLUE));
         plot.setSectionPaint("Samsung", createGradientPaint(new Color(255, 200, 200), Color.RED));
@@ -115,7 +119,6 @@ public class PDFPieChartDemo1 {
         plot.setSectionPaint("Nokia", createGradientPaint(new Color(200, 255, 200), Color.YELLOW));
         plot.setDefaultSectionOutlinePaint(Color.WHITE);
         plot.setSectionOutlinesVisible(true);
-        BasicStroke bs = new BasicStroke(2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 1.0f);
         plot.setDefaultSectionOutlineStroke(new BasicStroke(2.0f));
 
         // customise the section label appearance
@@ -125,7 +128,6 @@ public class PDFPieChartDemo1 {
         plot.setLabelOutlineStroke(null);
         plot.setLabelPaint(Color.WHITE);
         plot.setLabelBackgroundPaint(null);
-        
         // add a subtitle giving the data source
         TextTitle source = new TextTitle("Source: http://www.bbc.co.uk/news/business-15489523", 
                 new Font("Courier New", Font.PLAIN, 12));
@@ -162,14 +164,11 @@ public class PDFPieChartDemo1 {
      */
     public static void main(String[] args) throws IOException {
         JFreeChart chart = createChart(createDataset());
-        PDFDocument pdfDoc = new PDFDocument();
-        pdfDoc.setTitle("PDFPieChartDemo1");
-        pdfDoc.setAuthor("Object Refinery Limited");
-        Page page = pdfDoc.createPage(new Rectangle(612, 468));
-        PDFGraphics2D g2 = page.getGraphics2D();
+        SVGGraphics2D g2 = new SVGGraphics2D(600, 400);
         g2.setRenderingHint(JFreeChart.KEY_SUPPRESS_SHADOW_GENERATION, true);
-        chart.draw(g2, new Rectangle(0, 0, 612, 468));
-        File f = new File("PDFPieChartDemo1.pdf");
-        pdfDoc.writeToFile(f);
+        Rectangle r = new Rectangle(0, 0, 600, 400);
+        chart.draw(g2, r);
+        File f = new File("SVGPieChartDemo1.svg");
+        SVGUtils.writeToSVG(f, g2.getSVGElement());
     }
 }

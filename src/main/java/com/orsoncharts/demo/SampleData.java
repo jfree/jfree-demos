@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2016, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -54,11 +54,11 @@ public class SampleData {
      */
     public static CategoryDataset3D<String, String, String> createCompanyRevenueDataset() {    
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
 
         // http://investor.oracle.com/financial-reporting/quarterly-reports/default.aspx
         DefaultKeyedValues<String, Double> s1 
-                = new DefaultKeyedValues<String, Double>();
+                = new DefaultKeyedValues<>();
         s1.put("Q2/11", 10.775);  // May11
         s1.put("Q3/11", 8.181);   // Aug11
         s1.put("Q4/11", 8.792);   // Nov11
@@ -80,7 +80,7 @@ public class SampleData {
         dataset.addSeriesAsRow("Oracle", s1);
 
         DefaultKeyedValues<String, Double> s2 
-                = new DefaultKeyedValues<String, Double>();
+                = new DefaultKeyedValues<>();
         s2.put("Q2/11", 9.026);  // Jun11
         s2.put("Q3/11", 9.720);  // Sep11
         s2.put("Q4/11", 10.584);  // Dec11 
@@ -102,8 +102,7 @@ public class SampleData {
         dataset.addSeriesAsRow("Google", s2);
         
         // https://www.microsoft.com/investor/EarningsAndFinancials/TrendedHistory/default.aspx
-        DefaultKeyedValues<String, Double> s3 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s3 = new DefaultKeyedValues<>();
         s3.put("Q2/11", 17.37);
         s3.put("Q3/11", 17.37);
         s3.put("Q4/11", 20.89);
@@ -126,8 +125,7 @@ public class SampleData {
         dataset.addSeriesAsRow("Microsoft", s3);
         
         // http://investor.apple.com/results.cfm
-        DefaultKeyedValues<String, Double> s4 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s4 = new DefaultKeyedValues<>();
         s4.put("Q2/11", 28.57);
         s4.put("Q3/11", 28.27);
         s4.put("Q4/11", 46.33);

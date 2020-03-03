@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -36,9 +36,9 @@
 
 package com.orsoncharts.demo;
 
+import com.orsoncharts.data.Range;
 import java.awt.Color;
 
-import com.orsoncharts.Range;
 import com.orsoncharts.data.xyz.XYZDataset;
 import com.orsoncharts.renderer.xyz.StandardXYZColorSource;
 import com.orsoncharts.renderer.xyz.XYZColorSource;

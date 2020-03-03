@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -54,8 +54,8 @@ import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
 import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
 import com.orsoncharts.legend.LegendAnchor;
 import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.util.Orientation;
-import com.orsonpdf.PDFHints;
+import com.orsoncharts.Orientation;
+import org.jfree.pdf.PDFHints;
 
 /**
  * A demo of a 3D bar chart.

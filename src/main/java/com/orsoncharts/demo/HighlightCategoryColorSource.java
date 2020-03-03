@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -41,7 +41,7 @@ import java.awt.Color;
 import com.orsoncharts.Colors;
 import com.orsoncharts.renderer.category.CategoryColorSource;
 import com.orsoncharts.renderer.category.StandardCategoryColorSource;
-import com.orsoncharts.util.ArgChecks;
+import java.util.Objects;
 
 /**
  * A custom implementation of the {@link CategoryColorSource} interface.
@@ -140,7 +140,7 @@ public class HighlightCategoryColorSource extends StandardCategoryColorSource {
      * @param color  the color ({@code null} not permitted). 
      */
     public void setHighlightColor(Color color) {
-        ArgChecks.nullNotPermitted(color, "color");
+        Objects.requireNonNull(color, "color");
         this.highlightColor = color;
     }
  

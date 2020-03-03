@@ -1,4 +1,4 @@
-package org.jfree.graphics2d.svg.demo;
+package org.jfree.svg.demo;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -16,8 +16,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import org.jfree.graphics2d.svg.SVGGraphics2D;
-import org.jfree.graphics2d.svg.SVGUtils;
+import org.jfree.svg.SVGGraphics2D;
+import org.jfree.svg.SVGUtils;
 
 /**
  *

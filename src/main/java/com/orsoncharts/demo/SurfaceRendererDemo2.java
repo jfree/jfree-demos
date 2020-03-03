@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -44,7 +44,6 @@ import javax.swing.JPanel;
 import com.orsoncharts.Chart3DPanel;
 import com.orsoncharts.Chart3D;
 import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Range;
 import com.orsoncharts.axis.ValueAxis3D;
 import com.orsoncharts.data.function.Function3D;
 import com.orsoncharts.graphics3d.Dimension3D;
@@ -53,7 +52,8 @@ import com.orsoncharts.legend.LegendAnchor;
 import com.orsoncharts.plot.XYZPlot;
 import com.orsoncharts.renderer.RainbowScale;
 import com.orsoncharts.renderer.xyz.SurfaceRenderer;
-import com.orsoncharts.util.Orientation;
+import com.orsoncharts.Orientation;
+import com.orsoncharts.data.Range;
 
 /**
  * A demo of a surface chart.

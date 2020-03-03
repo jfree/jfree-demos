@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -123,7 +123,7 @@ public class ScatterPlot3DDemo1 extends JFrame {
         XYZSeries<String> s1 = createRandomSeries("S1", 10);
         XYZSeries<String> s2 = createRandomSeries("S2", 50);
         XYZSeries<String> s3 = createRandomSeries("S3", 150);
-        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
+        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<>();
         dataset.add(s1);
         dataset.add(s2);
         dataset.add(s3);
@@ -131,7 +131,7 @@ public class ScatterPlot3DDemo1 extends JFrame {
     }
     
     private static XYZSeries<String> createRandomSeries(String name, int count) {
-        XYZSeries<String> s = new XYZSeries<String>(name);
+        XYZSeries<String> s = new XYZSeries<>(name);
         for (int i = 0; i < count; i++) {
             s.add(Math.random() * 100, Math.random() / 100, Math.random() * 100);
         }

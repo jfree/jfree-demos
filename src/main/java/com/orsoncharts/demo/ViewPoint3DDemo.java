@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2016, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -36,8 +36,6 @@
 
 package com.orsoncharts.demo;
 
-import com.orsoncharts.demo.OrsonChartsDemo;
-import com.orsoncharts.demo.ExitOnClose;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -102,7 +100,7 @@ public class ViewPoint3DDemo extends JFrame {
     
     private List<Point3D> addRing(boolean b, World world, Point3D pt, Point3D v1, Color color) {
         boolean first = true;
-        List<Point3D> result = new ArrayList<Point3D>();
+        List<Point3D> result = new ArrayList<>();
         Rotate3D r = new Rotate3D(Point3D.ORIGIN, v1, 0);
         for (int i = 0; i < 60; i++) {
             r.setAngle(2 * Math.PI / 60 * i);

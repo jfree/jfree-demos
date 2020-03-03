@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -57,6 +57,7 @@ import com.orsoncharts.data.xyz.XYZDataset;
 import com.orsoncharts.data.xyz.XYZItemKey;
 import com.orsoncharts.data.xyz.XYZSeries;
 import com.orsoncharts.data.xyz.XYZSeriesCollection;
+import com.orsoncharts.graphics2d.Anchor2D;
 import com.orsoncharts.graphics3d.Dimension3D;
 import com.orsoncharts.graphics3d.Object3D;
 import com.orsoncharts.graphics3d.RenderedElement;
@@ -73,7 +74,6 @@ import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
 import com.orsoncharts.renderer.xyz.StandardXYZColorSource;
 import com.orsoncharts.style.ChartStyler;
 import com.orsoncharts.style.ChartStyles;
-import com.orsoncharts.util.Anchor2D;
 
 /**
  * A demonstration of range markers on the axes.

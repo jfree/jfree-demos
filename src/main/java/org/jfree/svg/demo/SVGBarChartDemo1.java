@@ -31,7 +31,7 @@
  * 
  */
 
-package org.jfree.graphics2d.svg.demo;
+package org.jfree.svg.demo;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -50,8 +50,8 @@ import org.jfree.chart.renderer.category.StatisticalBarRenderer;
 import org.jfree.chart.ui.TextAnchor;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.statistics.DefaultStatisticalCategoryDataset;
-import org.jfree.graphics2d.svg.SVGGraphics2D;
-import org.jfree.graphics2d.svg.SVGUtils;
+import org.jfree.svg.SVGGraphics2D;
+import org.jfree.svg.SVGUtils;
 
 /**
  * A demo/test for a bar chart.

@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2016, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -67,9 +67,9 @@ import com.orsoncharts.marker.RangeMarker;
 import com.orsoncharts.plot.CategoryPlot3D;
 import com.orsoncharts.plot.XYZPlot;
 import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
-import com.orsoncharts.util.Orientation;
+import com.orsoncharts.Orientation;
 
-import org.jfree.graphics2d.svg.SVGGraphics2D;
+import org.jfree.svg.SVGGraphics2D;
 
 /**
  * A demo showing the creation of an HTML page containing three charts in
@@ -100,7 +100,7 @@ public class SVGDemo1 {
      * @return A sample dataset.
      */
     static PieDataset3D<String> createPieChartDataset() {
-        StandardPieDataset3D<String> dataset = new StandardPieDataset3D<String>();
+        StandardPieDataset3D<String> dataset = new StandardPieDataset3D<>();
         dataset.add("Milk Products", 11625);
         dataset.add("Meat", 5114);
         dataset.add("Wood/Logs", 3060);
@@ -134,10 +134,10 @@ public class SVGDemo1 {
      */
     private static CategoryDataset3D createBarChartDataset() {    
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
 
         DefaultKeyedValues<String, Double> s1 
-                = new DefaultKeyedValues<String, Double>();
+                = new DefaultKeyedValues<>();
         s1.put("Q2/11", 8.181);
         s1.put("Q3/11", 8.792);
         s1.put("Q4/11", 9.039);
@@ -151,7 +151,7 @@ public class SVGDemo1 {
         dataset.addSeriesAsRow("Oracle", s1);
 
         DefaultKeyedValues<String, Double> s2 
-                = new DefaultKeyedValues<String, Double>();
+                = new DefaultKeyedValues<>();
         s2.put("Q2/11", 9.03);
         s2.put("Q3/11", 9.72);
         s2.put("Q4/11", 10.58);
@@ -166,7 +166,7 @@ public class SVGDemo1 {
         dataset.addSeriesAsRow("Google", s2);
         
         DefaultKeyedValues<String, Double> s3 
-                = new DefaultKeyedValues<String, Double>();
+                = new DefaultKeyedValues<>();
         s3.put("Q2/11", 17.37);
         s3.put("Q3/11", 17.37);
         s3.put("Q4/11", 20.89);
@@ -181,7 +181,7 @@ public class SVGDemo1 {
         dataset.addSeriesAsRow("Microsoft", s3);
         
         DefaultKeyedValues<String, Double> s4 
-                = new DefaultKeyedValues<String, Double>();
+                = new DefaultKeyedValues<>();
         s4.put("Q2/11", 28.57);
         s4.put("Q3/11", 28.27);
         s4.put("Q4/11", 46.33);

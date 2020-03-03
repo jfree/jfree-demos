@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -43,6 +43,7 @@ import javax.swing.JPanel;
 import com.orsoncharts.Chart3DPanel;
 import com.orsoncharts.Chart3D;
 import com.orsoncharts.Chart3DFactory;
+import com.orsoncharts.Orientation;
 import com.orsoncharts.TitleAnchor;
 import com.orsoncharts.data.PieDataset3D;
 import com.orsoncharts.data.StandardPieDataset3D;
@@ -51,7 +52,6 @@ import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
 import com.orsoncharts.interaction.Chart3DMouseEvent;
 import com.orsoncharts.interaction.Chart3DMouseListener;
 import com.orsoncharts.legend.LegendAnchor;
-import com.orsoncharts.util.Orientation;
 
 /**
  * A demo showing a simple pie chart in 3D.

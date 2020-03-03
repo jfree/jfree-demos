@@ -1,5 +1,5 @@
 /* =====================================================================
- * OrsonPDF : a fast, light-weight PDF library for the Java(tm) platform
+ * JFreePDF : a fast, light-weight PDF library for the Java(tm) platform
  * =====================================================================
  * 
  * (C)opyright 2013-2017, by Object Refinery Limited.  All rights reserved.
@@ -33,45 +33,77 @@
  * 
  */
 
-package com.orsonpdf.demo;
+package org.jfree.pdf.demo;
 
 import java.awt.BorderLayout;
 import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JComponent;
-import com.orsonpdf.PDFDocument;
-import com.orsonpdf.PDFGraphics2D;
-import com.orsonpdf.PDFHints;
-import com.orsonpdf.Page;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
+import org.jfree.pdf.PDFDocument;
+import org.jfree.pdf.PDFGraphics2D;
+import org.jfree.pdf.PDFHints;
+import org.jfree.pdf.Page;
 
 /**
- * Renders a Swing component to a PDF file.
+ * This demo shows how to export a Swing UI to PDF.
  */
-public class PDFSwingComponentDemo1 extends JFrame {
+public class SwingUIToPDFDemo extends JFrame implements ActionListener {
     
-    public PDFSwingComponentDemo1(String title) {
+    public SwingUIToPDFDemo(String title) {
         super(title);
-        JPanel content = new JPanel(new BorderLayout());
-        content.add(new JButton("Hello"));
-        content.add(new JLabel("This is a label"), BorderLayout.EAST);
-        setContentPane(content);
+        add(createContent());
     }
     
-    public static void main(String[] args) {
-        PDFSwingComponentDemo1 demo = new PDFSwingComponentDemo1(
-                "PDFSwingComponentDemo1.java");
-        demo.pack();
-        demo.setVisible(true);
-        PDFDocument pdf = new PDFDocument();
-        JComponent c = (JComponent) demo.getContentPane();
-        Page page = pdf.createPage(new Rectangle(c.getWidth(), c.getHeight()));
-        PDFGraphics2D g2 = page.getGraphics2D();
-        g2.setRenderingHint(PDFHints.KEY_DRAW_STRING_TYPE, PDFHints.VALUE_DRAW_STRING_TYPE_VECTOR);
-        demo.getContentPane().paint(g2); 
-        pdf.writeToFile(new File("PDFSwingComponentDemo1.pdf"));
+    private JComponent createContent() {
+        JPanel content = new JPanel(new BorderLayout());
+        JTabbedPane tabs = new JTabbedPane();
+        tabs.add("Tab 1", new JButton("First Tab"));
+        tabs.add("Tab 2", new JButton("Second Tab"));
+        JButton button = new JButton("Save to PDF");
+        button.addActionListener(this);
+        content.add(tabs);
+        content.add(button, BorderLayout.SOUTH);
+        return content;
     }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JComponent c = (JComponent) getContentPane().getComponent(0);
+        PDFDocument pdfDoc = new PDFDocument();
+        pdfDoc.setTitle("SwingUIToPDFDemo.java");
+        pdfDoc.setAuthor("Object Refinery Limited");
+        Page page = pdfDoc.createPage(new Rectangle(c.getWidth(), c.getHeight()));
+        PDFGraphics2D g2 = page.getGraphics2D();
+        g2.setRenderingHint(PDFHints.KEY_DRAW_STRING_TYPE, 
+                PDFHints.VALUE_DRAW_STRING_TYPE_VECTOR);
+        c.paint(g2);
+        File f = new File("SwingUIToPDFDemo.pdf");
+        pdfDoc.writeToFile(f);
+    }
+
+    public static void main(String[] args) {
+        try {
+            for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            // If Nimbus is not available, you can set the GUI to another look and feel.
+        }
+
+        SwingUIToPDFDemo app = new SwingUIToPDFDemo("SwingUIToPDFDemo.java");
+        app.pack();
+        app.setVisible(true);
+    }
+
 }

@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2016, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -61,7 +61,7 @@ import com.orsoncharts.plot.XYZPlot;
 import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
 import com.orsoncharts.style.StandardChartStyle;
 import com.orsoncharts.table.TextElement;
-import com.orsoncharts.util.Orientation;
+import com.orsoncharts.Orientation;
 
 /**
  * A demonstration of a scatter plot in 3D.

@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2020, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -108,11 +108,11 @@ public class XYZBarChart3DDemo1 extends JFrame {
      * @return A sample dataset.
      */
     private static XYZDataset<String> createDataset() {
-        XYZSeries<String> series1 = new XYZSeries<String>("Series 1");
+        XYZSeries<String> series1 = new XYZSeries<>("Series 1");
         series1.add(1.0, 5.0, 1.0);
-        XYZSeries<String> series2 = new XYZSeries<String>("Series 2");
+        XYZSeries<String> series2 = new XYZSeries<>("Series 2");
         series2.add(2.0, 8.0, 2.0);
-        XYZSeries<String> series3 = new XYZSeries<String>("Series 3");
+        XYZSeries<String> series3 = new XYZSeries<>("Series 3");
         series3.add(1.0, 10.0, 2.0);
         XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
         dataset.add(series1);
