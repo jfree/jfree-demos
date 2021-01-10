@@ -59,7 +59,7 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.svg</artifactId>
-            <version>4.1</version>
+            <version>4.2</version>
         </dependency>
  
         <dependency>
