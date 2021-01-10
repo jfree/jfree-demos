@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,20 +40,19 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.ValueAxis3D;
-import com.orsoncharts.data.function.Function3D;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.legend.LegendAnchor;
-import com.orsoncharts.plot.XYZPlot;
-import com.orsoncharts.renderer.RainbowScale;
-import com.orsoncharts.renderer.xyz.SurfaceRenderer;
-import com.orsoncharts.Orientation;
-import com.orsoncharts.data.Range;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Orientation;
+import org.jfree.chart3d.axis.ValueAxis3D;
+import org.jfree.chart3d.data.Range;
+import org.jfree.chart3d.data.function.Function3D;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.legend.LegendAnchor;
+import org.jfree.chart3d.plot.XYZPlot;
+import org.jfree.chart3d.renderer.RainbowScale;
+import org.jfree.chart3d.renderer.xyz.SurfaceRenderer;
 
 /**
  * A demo of a surface chart.

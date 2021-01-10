@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -36,9 +36,6 @@
 
 package com.orsoncharts.demo;
 
-import com.orsoncharts.demo.OrsonChartsDemo;
-import com.orsoncharts.demo.DemoPanel;
-import com.orsoncharts.demo.ExitOnClose;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -50,22 +47,21 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.ValueAxis3D;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.data.xyz.XYZItemKeys;
-import com.orsoncharts.data.xyz.XYZSeries;
-import com.orsoncharts.data.xyz.XYZSeriesCollection;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.interaction.StandardXYZDataItemSelection;
-import com.orsoncharts.label.StandardXYZItemLabelGenerator;
-import com.orsoncharts.plot.XYZPlot;
-import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.ValueAxis3D;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.data.xyz.XYZItemKeys;
+import org.jfree.chart3d.data.xyz.XYZSeries;
+import org.jfree.chart3d.data.xyz.XYZSeriesCollection;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.interaction.StandardXYZDataItemSelection;
+import org.jfree.chart3d.label.StandardXYZItemLabelGenerator;
+import org.jfree.chart3d.plot.XYZPlot;
+import org.jfree.chart3d.renderer.xyz.ScatterXYZRenderer;
 
 /**
  * A demonstration of a scatter plot in 3D.
@@ -222,7 +218,7 @@ public class AxisRangeDemo5 extends JFrame {
         XYZSeries<String> s1 = createRandomSeries("S1", 10);
         XYZSeries<String> s2 = createRandomSeries("S2", 50);
         XYZSeries<String> s3 = createRandomSeries("S3", 150);
-        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
+        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<>();
         dataset.add(s1);
         dataset.add(s2);
         dataset.add(s3);
@@ -230,7 +226,7 @@ public class AxisRangeDemo5 extends JFrame {
     }
    
     private static XYZSeries<String> createRandomSeries(String name, int count) {
-        XYZSeries<String> s = new XYZSeries<String>(name);
+        XYZSeries<String> s = new XYZSeries<>(name);
         for (int i = 0; i < count; i++) {
             s.add(Math.random() * 100, Math.random() * 10, Math.random() * 100);
         }

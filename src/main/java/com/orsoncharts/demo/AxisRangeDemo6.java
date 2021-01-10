@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -36,23 +36,10 @@
 
 package com.orsoncharts.demo;
 
-import com.orsoncharts.demo.OrsonChartsDemo;
-import com.orsoncharts.demo.DemoPanel;
-import com.orsoncharts.demo.ExitOnClose;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.ValueAxis3D;
-import com.orsoncharts.data.function.Function3D;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.plot.XYZPlot;
 
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -62,6 +49,15 @@ import javax.swing.JLabel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.ValueAxis3D;
+import org.jfree.chart3d.data.function.Function3D;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.plot.XYZPlot;
 
 /**
  * A demonstration of a scatter plot in 3D.

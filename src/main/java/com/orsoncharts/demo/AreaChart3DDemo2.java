@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,17 +40,17 @@ import java.awt.Color;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.renderer.category.AreaRenderer3D;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.renderer.category.AreaRenderer3D;
 
 /**
  * A demo of a 3D area chart.
@@ -119,10 +119,9 @@ public class AreaChart3DDemo2 extends JFrame {
      */
     private static CategoryDataset3D createDataset() {    
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
                 
-        DefaultKeyedValues<String, Number> s1 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s1 = new DefaultKeyedValues<>();
         s1.put("A", -1);
         s1.put("B", -4);
         s1.put("C", -9);
@@ -135,8 +134,7 @@ public class AreaChart3DDemo2 extends JFrame {
         s1.put("J", -1);
         dataset.addSeriesAsRow("Series 1", s1);
         
-        DefaultKeyedValues<String, Number> s2 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s2 = new DefaultKeyedValues<>();
         s2.put("A", 1);
         s2.put("B", 12);
         s2.put("C", 14);
@@ -149,8 +147,7 @@ public class AreaChart3DDemo2 extends JFrame {
         s2.put("J", 4);
         dataset.addSeriesAsRow("Series 2", s2);
         
-        DefaultKeyedValues<String, Number> s3 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s3 = new DefaultKeyedValues<>();
         s3.put("A", 5);
         s3.put("B", 13);
         s3.put("C", 19);
@@ -163,8 +160,7 @@ public class AreaChart3DDemo2 extends JFrame {
         s3.put("J", -20);
         dataset.addSeriesAsRow("Series 3", s3);
 
-        DefaultKeyedValues<String, Number> s4 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s4 = new DefaultKeyedValues<>();
         s4.put("A", 5);
         s4.put("B", 18);
         s4.put("C", 20);

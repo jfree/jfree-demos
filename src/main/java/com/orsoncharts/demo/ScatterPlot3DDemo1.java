@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,20 +40,19 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.data.xyz.XYZSeries;
-import com.orsoncharts.data.xyz.XYZSeriesCollection;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.label.StandardXYZLabelGenerator;
-import com.orsoncharts.plot.XYZPlot;
-import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.data.xyz.XYZSeries;
+import org.jfree.chart3d.data.xyz.XYZSeriesCollection;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.label.StandardXYZLabelGenerator;
+import org.jfree.chart3d.plot.XYZPlot;
+import org.jfree.chart3d.renderer.xyz.ScatterXYZRenderer;
 
 /**
  * A demonstration of a scatter plot in 3D.

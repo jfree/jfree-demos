@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,18 +40,18 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Orientation;
-import com.orsoncharts.TitleAnchor;
-import com.orsoncharts.data.PieDataset3D;
-import com.orsoncharts.data.StandardPieDataset3D;
-import com.orsoncharts.graphics3d.RenderedElement;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.interaction.Chart3DMouseEvent;
-import com.orsoncharts.interaction.Chart3DMouseListener;
-import com.orsoncharts.legend.LegendAnchor;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Orientation;
+import org.jfree.chart3d.TitleAnchor;
+import org.jfree.chart3d.data.PieDataset3D;
+import org.jfree.chart3d.data.StandardPieDataset3D;
+import org.jfree.chart3d.graphics3d.RenderedElement;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.interaction.Chart3DMouseEvent;
+import org.jfree.chart3d.interaction.Chart3DMouseListener;
+import org.jfree.chart3d.legend.LegendAnchor;
 
 /**
  * A demo showing a simple pie chart in 3D.
@@ -132,7 +132,7 @@ public class PieChart3DDemo1 extends JFrame {
      * @return A sample dataset.
      */
     private static PieDataset3D<String> createDataset() {
-        StandardPieDataset3D<String> dataset = new StandardPieDataset3D<String>();
+        StandardPieDataset3D<String> dataset = new StandardPieDataset3D<>();
         dataset.add("Milk Products", 11625);
         dataset.add("Meat", 5114);
         dataset.add("Wood/Logs", 3060);

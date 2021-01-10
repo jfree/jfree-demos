@@ -2,7 +2,7 @@
  * SVGBarChartDemo1.java
  * =====================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.jfree.org/jfreechart/index.html

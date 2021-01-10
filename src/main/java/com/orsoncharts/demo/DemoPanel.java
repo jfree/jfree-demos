@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -42,7 +42,7 @@ import java.util.List;
 
 import javax.swing.JPanel;
 
-import com.orsoncharts.Chart3DPanel;
+import org.jfree.chart3d.Chart3DPanel;
 
 /**
  * The base class for panels created by demo applications.  Some demos will 
@@ -55,7 +55,7 @@ public class DemoPanel extends JPanel {
      * A list of the chart panels on the demo panel (usually just one, but 
      * there can be multiple panels).
      */
-    private List<Chart3DPanel> chartPanels;
+    private final List<Chart3DPanel> chartPanels;
     
     /**
      * Creates a new instance.
@@ -64,7 +64,7 @@ public class DemoPanel extends JPanel {
      */
     public DemoPanel(LayoutManager layout) {
         super(layout);
-        this.chartPanels = new ArrayList<Chart3DPanel>();
+        this.chartPanels = new ArrayList<>();
     }
     
     /**

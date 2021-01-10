@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -37,11 +37,10 @@
 package com.orsoncharts.demo;
 
 import java.awt.Color;
-
-import com.orsoncharts.Colors;
-import com.orsoncharts.renderer.category.CategoryColorSource;
-import com.orsoncharts.renderer.category.StandardCategoryColorSource;
 import java.util.Objects;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.renderer.category.CategoryColorSource;
+import org.jfree.chart3d.renderer.category.StandardCategoryColorSource;
 
 /**
  * A custom implementation of the {@link CategoryColorSource} interface.

@@ -2,7 +2,7 @@
  * TimeSeriesChartDemo1.java
  * =========================
  *
- * (C) Copyright 2003-2017, by Object Refinery Limited.
+ * (C) Copyright 2003-2021, by Object Refinery Limited.
  *
  * Project Info:  http://www.jfree.org/jfreechart/index.html
  *

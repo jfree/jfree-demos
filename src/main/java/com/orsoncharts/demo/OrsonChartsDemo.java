@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -60,11 +60,10 @@ import javax.swing.SwingUtilities;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
-
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.style.ChartStyle;
-import com.orsoncharts.style.ChartStyles;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.style.ChartStyle;
+import org.jfree.chart3d.style.ChartStyles;
 
 /**
  * A demo application for Orson Charts.  This aggregates all the individual
@@ -277,8 +276,7 @@ public class OrsonChartsDemo extends JFrame implements ActionListener {
                         }
                     }
                 }
-                OrsonChartsDemo app = new OrsonChartsDemo(
-                        "Orson Charts Demo 1.7");
+                OrsonChartsDemo app = new OrsonChartsDemo("Orson Charts Demo 2.0");
                 app.pack();
                 app.setVisible(true);
             }

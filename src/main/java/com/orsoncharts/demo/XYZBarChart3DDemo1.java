@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,15 +40,15 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.data.xyz.XYZSeries;
+import org.jfree.chart3d.data.xyz.XYZSeriesCollection;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
 
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.data.xyz.XYZSeries;
-import com.orsoncharts.data.xyz.XYZSeriesCollection;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
 
 /**
  * A demo of a 3D bar chart.
@@ -114,7 +114,7 @@ public class XYZBarChart3DDemo1 extends JFrame {
         series2.add(2.0, 8.0, 2.0);
         XYZSeries<String> series3 = new XYZSeries<>("Series 3");
         series3.add(1.0, 10.0, 2.0);
-        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
+        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<>();
         dataset.add(series1);
         dataset.add(series2);
         dataset.add(series3);

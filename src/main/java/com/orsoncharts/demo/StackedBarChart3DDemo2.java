@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -41,16 +41,16 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.renderer.category.StackedBarRenderer3D;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.renderer.category.StackedBarRenderer3D;
 
 /**
  * A demo of a 3D stacked bar chart.
@@ -121,7 +121,7 @@ public class StackedBarChart3DDemo2 extends JFrame {
     private static CategoryDataset3D<String, String, String> createDataset() {
         
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
 
         dataset.addValue(197, "Agricultural", "R1", "Brazil");
         dataset.addValue(64, "Domestic", "R1", "Brazil");

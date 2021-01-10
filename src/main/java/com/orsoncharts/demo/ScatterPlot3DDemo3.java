@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -46,22 +46,22 @@ import java.io.Reader;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.data.DataUtils;
-import com.orsoncharts.data.JSONUtils;
-import com.orsoncharts.data.KeyedValues3D;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.legend.LegendAnchor;
-import com.orsoncharts.plot.XYZPlot;
-import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
-import com.orsoncharts.style.StandardChartStyle;
-import com.orsoncharts.table.TextElement;
-import com.orsoncharts.Orientation;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.Orientation;
+import org.jfree.chart3d.data.DataUtils;
+import org.jfree.chart3d.data.JSONUtils;
+import org.jfree.chart3d.data.KeyedValues3D;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.legend.LegendAnchor;
+import org.jfree.chart3d.plot.XYZPlot;
+import org.jfree.chart3d.renderer.xyz.ScatterXYZRenderer;
+import org.jfree.chart3d.style.StandardChartStyle;
+import org.jfree.chart3d.table.TextElement;
 
 /**
  * A demonstration of a scatter plot in 3D.

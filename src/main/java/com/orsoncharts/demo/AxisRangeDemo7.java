@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -47,20 +47,19 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.ValueAxis3D;
-import com.orsoncharts.data.DataUtils;
-import com.orsoncharts.data.Range;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.data.xyz.XYZSeries;
-import com.orsoncharts.data.xyz.XYZSeriesCollection;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.plot.XYZPlot;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.ValueAxis3D;
+import org.jfree.chart3d.data.DataUtils;
+import org.jfree.chart3d.data.Range;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.data.xyz.XYZSeries;
+import org.jfree.chart3d.data.xyz.XYZSeriesCollection;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.plot.XYZPlot;
 
 /**
  * A demonstration of a scatter plot in 3D.
@@ -216,7 +215,7 @@ public class AxisRangeDemo7 extends JFrame {
      * @return A sample dataset.
      */
     private static XYZDataset<String> createDataset() {
-        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
+        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<>();
         for (int s = 1; s <= 10; s++) {
             XYZSeries<String> s1 = createRandomSeries("S" + s, s, 100);
             dataset.add(s1);
@@ -226,7 +225,7 @@ public class AxisRangeDemo7 extends JFrame {
    
     private static XYZSeries<String> createRandomSeries(String name, int series,
             int count) {
-        XYZSeries<String> s = new XYZSeries<String>(name);
+        XYZSeries<String> s = new XYZSeries<>(name);
         double y = 10.0;
         for (int i = 0; i < count; i++) {
             y = y + (Math.random() - 0.48) * 2.0;

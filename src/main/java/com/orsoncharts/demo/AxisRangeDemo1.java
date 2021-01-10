@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -36,9 +36,6 @@
 
 package com.orsoncharts.demo;
 
-import com.orsoncharts.demo.OrsonChartsDemo;
-import com.orsoncharts.demo.DemoPanel;
-import com.orsoncharts.demo.ExitOnClose;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -51,18 +48,18 @@ import javax.swing.event.ChangeListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.ValueAxis3D;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.renderer.category.AreaRenderer3D;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.ValueAxis3D;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.label.StandardCategoryItemLabelGenerator;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.renderer.category.AreaRenderer3D;
 
 /**
  * A test for changes to the value axis range on an area chart.

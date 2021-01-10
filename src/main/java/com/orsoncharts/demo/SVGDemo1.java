@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -47,27 +47,27 @@ import java.io.Reader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.TitleAnchor;
-import com.orsoncharts.axis.NumberAxis3D;
-import com.orsoncharts.axis.StandardCategoryAxis3D;
-import com.orsoncharts.data.DataUtils;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.JSONUtils;
-import com.orsoncharts.data.KeyedValues3D;
-import com.orsoncharts.data.PieDataset3D;
-import com.orsoncharts.data.StandardPieDataset3D;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.legend.LegendAnchor;
-import com.orsoncharts.marker.CategoryMarker;
-import com.orsoncharts.marker.RangeMarker;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.plot.XYZPlot;
-import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
-import com.orsoncharts.Orientation;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Orientation;
+import org.jfree.chart3d.TitleAnchor;
+import org.jfree.chart3d.axis.NumberAxis3D;
+import org.jfree.chart3d.axis.StandardCategoryAxis3D;
+import org.jfree.chart3d.data.DataUtils;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.JSONUtils;
+import org.jfree.chart3d.data.KeyedValues3D;
+import org.jfree.chart3d.data.PieDataset3D;
+import org.jfree.chart3d.data.StandardPieDataset3D;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.legend.LegendAnchor;
+import org.jfree.chart3d.marker.CategoryMarker;
+import org.jfree.chart3d.marker.RangeMarker;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.plot.XYZPlot;
+import org.jfree.chart3d.renderer.xyz.ScatterXYZRenderer;
 
 import org.jfree.svg.SVGGraphics2D;
 

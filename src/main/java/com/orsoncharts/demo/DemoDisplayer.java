@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  * 
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -43,8 +43,8 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DPanel;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DPanel;
 
 public class DemoDisplayer implements Runnable {
 

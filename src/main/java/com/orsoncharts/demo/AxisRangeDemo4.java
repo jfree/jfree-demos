@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -36,9 +36,6 @@
 
 package com.orsoncharts.demo;
 
-import com.orsoncharts.demo.OrsonChartsDemo;
-import com.orsoncharts.demo.DemoPanel;
-import com.orsoncharts.demo.ExitOnClose;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -50,19 +47,18 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.ValueAxis3D;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.renderer.category.StackedBarRenderer3D;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.ValueAxis3D;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.label.StandardCategoryItemLabelGenerator;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.renderer.category.StackedBarRenderer3D;
 
 /**
  * A test for changes to the value axis range on a bar chart.
@@ -157,34 +153,30 @@ public class AxisRangeDemo4 extends JFrame {
     private static CategoryDataset3D createDataset() {    
 
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
         
-        DefaultKeyedValues<String, Integer> s0 = new DefaultKeyedValues<String,
-                Integer>();
+        DefaultKeyedValues<String, Integer> s0 = new DefaultKeyedValues<>();
         s0.put("A", -500);
         s0.put("B", -200);
         s0.put("C", -400);
         s0.put("D", -150);
         dataset.addSeriesAsRow("S1", "A", s0);
         
-        DefaultKeyedValues<String, Integer> s1 = new DefaultKeyedValues<String,
-                Integer>();
+        DefaultKeyedValues<String, Integer> s1 = new DefaultKeyedValues<>();
         s1.put("A", -500);
         s1.put("B", 500);
         s1.put("C", 0);
         s1.put("D", -150);
         dataset.addSeriesAsRow("S2", "A", s1);
 
-        DefaultKeyedValues<String, Integer> s2 
-                = new DefaultKeyedValues<String, Integer>();
+        DefaultKeyedValues<String, Integer> s2 = new DefaultKeyedValues<>();
         s2.put("A", 500);
         s2.put("B", -500);
         s2.put("C", 0);
         s2.put("D", 150);
         dataset.addSeriesAsRow("S3", "B", s2);
 
-        DefaultKeyedValues<String, Integer> s3 
-                = new DefaultKeyedValues<String, Integer>();
+        DefaultKeyedValues<String, Integer> s3 = new DefaultKeyedValues<>();
         s3.put("A", 500);
         s3.put("B", 200);
         s3.put("C", 400);

@@ -2,7 +2,7 @@
  * SVGChartWithAnnotations.java
  * ============================
  * 
- * Copyright (c) 2013-2017, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without

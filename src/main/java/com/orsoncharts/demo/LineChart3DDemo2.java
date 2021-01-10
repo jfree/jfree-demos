@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,14 +40,14 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.legend.LegendAnchor;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.legend.LegendAnchor;
 
 /**
  * A demo of a 3D line chart.
@@ -102,11 +102,10 @@ public class LineChart3DDemo2 extends JFrame {
      */
     private static CategoryDataset3D createDataset() {    
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
         
         // http://investor.bankofamerica.com/phoenix.zhtml?c=71595&p=quarterlyearnings#fbid=Ke_-yRMOTA4
-        DefaultKeyedValues<String, Number> s0 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s0 = new DefaultKeyedValues<>();
         s0.put("Q3/11", 5889);
         s0.put("Q4/11", 1584);
         s0.put("Q1/12", 328);
@@ -119,8 +118,7 @@ public class LineChart3DDemo2 extends JFrame {
         dataset.addSeriesAsRow("Bank of America", s0);
 
         // http://www.citigroup.com/citi/investor/data/qer313s.pdf
-        DefaultKeyedValues<String, Number> s1 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s1 = new DefaultKeyedValues<>();
         s1.put("Q3/11", 3771);
         s1.put("Q4/11", 956);
         s1.put("Q1/12", 2931);
@@ -133,8 +131,7 @@ public class LineChart3DDemo2 extends JFrame {
         dataset.addSeriesAsRow("Citigroup", s1);
         
         // https://www.wellsfargo.com/downloads/pdf/press/3q13pr.pdf 
-        DefaultKeyedValues<String, Number> s3 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s3 = new DefaultKeyedValues<>();
         s3.put("Q3/11", 4055);
         s3.put("Q4/11", 4107);
         s3.put("Q1/12", 4248);
@@ -148,8 +145,7 @@ public class LineChart3DDemo2 extends JFrame {
         dataset.addSeriesAsRow("Wells Fargo", s3);
 
         // http://files.shareholder.com/downloads/ONE/2724973994x0x696270/df38c408-0315-43dd-b896-6fe6bc895050/3Q13_Earnings_Earnings_Supplement.pdf
-        DefaultKeyedValues<String, Number> s2 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s2 = new DefaultKeyedValues<>();
         s2.put("Q3/11", 4262);
         s2.put("Q4/11", 3728);
         s2.put("Q1/12", 4924);

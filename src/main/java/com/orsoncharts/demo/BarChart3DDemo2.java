@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -41,20 +41,20 @@ import java.awt.Color;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.axis.NumberAxis3D;
-import com.orsoncharts.axis.StandardCategoryAxis3D;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
-import com.orsoncharts.legend.LegendAnchor;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.Orientation;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.Orientation;
+import org.jfree.chart3d.axis.NumberAxis3D;
+import org.jfree.chart3d.axis.StandardCategoryAxis3D;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.label.StandardCategoryItemLabelGenerator;
+import org.jfree.chart3d.legend.LegendAnchor;
+import org.jfree.chart3d.plot.CategoryPlot3D;
 import org.jfree.pdf.PDFHints;
 
 /**
@@ -138,10 +138,9 @@ public class BarChart3DDemo2 extends JFrame {
      * @return A sample dataset.
      */
     private static CategoryDataset3D createDataset() {    
-        StandardCategoryDataset3D<String, String, String> dataset = new StandardCategoryDataset3D<String, String, String>();
+        StandardCategoryDataset3D<String, String, String> dataset = new StandardCategoryDataset3D<>();
                 
-        DefaultKeyedValues<String, Number> s3 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s3 = new DefaultKeyedValues<>();
         s3.put("Jan", 7);
         s3.put("Feb", 7);
         s3.put("Mar", 10);
@@ -156,8 +155,7 @@ public class BarChart3DDemo2 extends JFrame {
         s3.put("Dec", 8);
         dataset.addSeriesAsRow("London", s3);
 
-        DefaultKeyedValues<String, Number> s1 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s1 = new DefaultKeyedValues<>();
         s1.put("Jan", 3);
         s1.put("Feb", 5);
         s1.put("Mar", 9);
@@ -172,8 +170,7 @@ public class BarChart3DDemo2 extends JFrame {
         s1.put("Dec", 4);
         dataset.addSeriesAsRow("Geneva", s1);
         
-        DefaultKeyedValues<String, Number> s2 = new DefaultKeyedValues<String,
-                Number>();
+        DefaultKeyedValues<String, Number> s2 = new DefaultKeyedValues<>();
         s2.put("Jan", 9);
         s2.put("Feb", 11);
         s2.put("Mar", 13);
@@ -188,8 +185,7 @@ public class BarChart3DDemo2 extends JFrame {
         s2.put("Dec", 9);
         dataset.addSeriesAsRow("Bergerac", s2);
 
-        DefaultKeyedValues<String, Number> s4 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s4 = new DefaultKeyedValues<>();
         s4.put("Jan", 22);
         s4.put("Feb", 22);
         s4.put("Mar", 20);
@@ -204,8 +200,7 @@ public class BarChart3DDemo2 extends JFrame {
         s4.put("Dec", 21);
         dataset.addSeriesAsRow("Christchurch", s4);
 
-        DefaultKeyedValues<String, Number> s5 = new DefaultKeyedValues<String, 
-                Number>();
+        DefaultKeyedValues<String, Number> s5 = new DefaultKeyedValues<>();
         s5.put("Jan", 20);
         s5.put("Feb", 20);
         s5.put("Mar", 19);

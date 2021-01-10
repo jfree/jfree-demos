@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -43,15 +43,14 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.graphics3d.DefaultDrawable3D;
-import com.orsoncharts.graphics3d.Object3D;
-import com.orsoncharts.graphics3d.Point3D;
-import com.orsoncharts.graphics3d.Rotate3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.World;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.graphics3d.swing.Panel3D;
+import org.jfree.chart3d.graphics3d.DefaultDrawable3D;
+import org.jfree.chart3d.graphics3d.Object3D;
+import org.jfree.chart3d.graphics3d.Point3D;
+import org.jfree.chart3d.graphics3d.Rotate3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.World;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.graphics3d.swing.Panel3D;
 
 /**
  * A demo of the viewing point.

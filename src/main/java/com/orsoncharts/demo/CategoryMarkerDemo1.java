@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -45,30 +45,29 @@ import java.awt.event.ActionListener;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.axis.StandardCategoryAxis3D;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.KeyedValues3DItemKeys;
-import com.orsoncharts.data.KeyedValues3DItemKey;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.Object3D;
-import com.orsoncharts.graphics3d.RenderedElement;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.interaction.Chart3DMouseEvent;
-import com.orsoncharts.interaction.Chart3DMouseListener;
-import com.orsoncharts.interaction.InteractiveElementType;
-import com.orsoncharts.interaction.KeyedValues3DItemSelection;
-import com.orsoncharts.interaction.StandardKeyedValues3DItemSelection;
-import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
-import com.orsoncharts.legend.LegendAnchor;
-import com.orsoncharts.marker.CategoryMarker;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.renderer.category.BarRenderer3D;
-import com.orsoncharts.style.ChartStyler;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.StandardCategoryAxis3D;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.KeyedValues3DItemKey;
+import org.jfree.chart3d.data.KeyedValues3DItemKeys;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.Object3D;
+import org.jfree.chart3d.graphics3d.RenderedElement;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.interaction.Chart3DMouseEvent;
+import org.jfree.chart3d.interaction.Chart3DMouseListener;
+import org.jfree.chart3d.interaction.InteractiveElementType;
+import org.jfree.chart3d.interaction.KeyedValues3DItemSelection;
+import org.jfree.chart3d.interaction.StandardKeyedValues3DItemSelection;
+import org.jfree.chart3d.label.StandardCategoryItemLabelGenerator;
+import org.jfree.chart3d.legend.LegendAnchor;
+import org.jfree.chart3d.marker.CategoryMarker;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.renderer.category.BarRenderer3D;
+import org.jfree.chart3d.style.ChartStyler;
 
 /**
  * A demo showing category markers on a 3D bar chart plus many elements of
@@ -266,10 +265,9 @@ public class CategoryMarkerDemo1 extends JFrame {
      */
     private static CategoryDataset3D createDataset() {    
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
 
-        DefaultKeyedValues<String, Double> s1 = new DefaultKeyedValues<String, 
-                Double>();
+        DefaultKeyedValues<String, Double> s1 = new DefaultKeyedValues<>();
         s1.put("Q2/11", 8.181);
         s1.put("Q3/11", 8.792);
         s1.put("Q4/11", 9.039);
@@ -282,8 +280,7 @@ public class CategoryMarkerDemo1 extends JFrame {
         s1.put("Q3/13", 9.275);
         dataset.addSeriesAsRow("Oracle", s1);
 
-        DefaultKeyedValues<String, Double> s2 = new DefaultKeyedValues<String,
-                Double>();
+        DefaultKeyedValues<String, Double> s2 = new DefaultKeyedValues<>();
         s2.put("Q2/11", 9.03);
         s2.put("Q3/11", 9.72);
         s2.put("Q4/11", 10.58);
@@ -297,8 +294,7 @@ public class CategoryMarkerDemo1 extends JFrame {
         s2.put("Q4/13", 16.858);
         dataset.addSeriesAsRow("Google", s2);
         
-        DefaultKeyedValues<String, Double> s3 = new DefaultKeyedValues<String,
-                Double>();
+        DefaultKeyedValues<String, Double> s3 = new DefaultKeyedValues<>();
         s3.put("Q2/11", 17.37);
         s3.put("Q3/11", 17.37);
         s3.put("Q4/11", 20.89);
@@ -312,8 +308,7 @@ public class CategoryMarkerDemo1 extends JFrame {
         s3.put("Q4/13", 24.519);
         dataset.addSeriesAsRow("Microsoft", s3);
         
-        DefaultKeyedValues<String, Double> s4 = new DefaultKeyedValues<String,
-                Double>();
+        DefaultKeyedValues<String, Double> s4 = new DefaultKeyedValues<>();
         s4.put("Q2/11", 28.57);
         s4.put("Q3/11", 28.27);
         s4.put("Q4/11", 46.33);

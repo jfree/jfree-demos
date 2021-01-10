@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -43,18 +43,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.TitleAnchor;
-import com.orsoncharts.data.PieDataset3D;
-import com.orsoncharts.data.StandardPieDataset3D;
-import com.orsoncharts.plot.PiePlot3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.label.StandardPieLabelGenerator;
-import static com.orsoncharts.label.StandardPieLabelGenerator.PERCENT_TEMPLATE;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.TitleAnchor;
+import org.jfree.chart3d.data.PieDataset3D;
+import org.jfree.chart3d.data.StandardPieDataset3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.label.StandardPieLabelGenerator;
+import static org.jfree.chart3d.label.StandardPieLabelGenerator.PERCENT_TEMPLATE;
+import org.jfree.chart3d.plot.PiePlot3D;
 
 /**
  * A demo of a pie chart.
@@ -100,7 +99,7 @@ public class PieChart3DDemo2 extends JFrame {
      * @return A sample dataset.
      */
     private static PieDataset3D<String> createDataset() {
-        StandardPieDataset3D<String> dataset = new StandardPieDataset3D<String>();
+        StandardPieDataset3D<String> dataset = new StandardPieDataset3D<>();
         dataset.add("United States", Math.random() * 30);
         dataset.add("France", Math.random() * 20);
         dataset.add("New Zealand", Math.random() * 12);
@@ -120,7 +119,7 @@ public class PieChart3DDemo2 extends JFrame {
     private static Chart3D createChart(PieDataset3D<String> dataset) {
         final Chart3D chart = Chart3DFactory.createPieChart("Orson Charts 3D", 
             "For more info see: http://www.object-refinery.com/orsoncharts/", 
-            createDataset());
+            dataset);
         chart.setTitleAnchor(TitleAnchor.TOP_LEFT);
         PiePlot3D plot = (PiePlot3D) chart.getPlot();
         plot.setLegendLabelGenerator(new StandardPieLabelGenerator(PERCENT_TEMPLATE));

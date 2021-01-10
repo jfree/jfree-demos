@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,14 +40,13 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
 
 /**
  * A demo of a 3D stacked bar chart.
@@ -90,34 +89,30 @@ public class StackedBarChart3DDemo1 extends JFrame {
     private static CategoryDataset3D createDataset() {
         
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
 
-        DefaultKeyedValues<String, Double> s1 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s1 = new DefaultKeyedValues<>();
         s1.put("A", 4.0);
         s1.put("B", 2.0);
         s1.put("C", 3.0);
         s1.put("D", 5.0);
         s1.put("E", 2.0);
         s1.put("F", 1.0);
-        DefaultKeyedValues<String, Double> s2 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s2 = new DefaultKeyedValues<>();
         s2.put("A", 1.0);
         s2.put("B", 2.0);
         s2.put("C", 3.0);
         s2.put("D", 2.0);
         s2.put("E", 3.0);
         s2.put("F", 1.0);
-        DefaultKeyedValues<String, Double> s3 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s3 = new DefaultKeyedValues<>();
         s3.put("A", 6.0);
         s3.put("B", 6.0);
         s3.put("C", 6.0);
         s3.put("D", 4.0);
         s3.put("E", 4.0);
         s3.put("F", 4.0);
-        DefaultKeyedValues<String, Double> s4 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s4 = new DefaultKeyedValues<>();
         s4.put("A", 9.0);
         s4.put("B", 8.0);
         s4.put("C", 7.0);
@@ -125,8 +120,7 @@ public class StackedBarChart3DDemo1 extends JFrame {
         s4.put("D", 3.0);
         s4.put("E", 4.0);
         s4.put("F", 6.0);
-        DefaultKeyedValues<String, Double> s5 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> s5 = new DefaultKeyedValues<>();
         s5.put("A", 9.0);
         s5.put("B", 8.0);
         s5.put("C", 7.0);

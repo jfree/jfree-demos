@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -40,21 +40,20 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.axis.NumberAxis3D;
-import com.orsoncharts.axis.NumberTickSelector;
-import com.orsoncharts.data.DefaultKeyedValues;
-import com.orsoncharts.data.KeyedValues;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.plot.CategoryPlot3D;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.axis.NumberAxis3D;
+import org.jfree.chart3d.axis.NumberTickSelector;
+import org.jfree.chart3d.data.DefaultKeyedValues;
+import org.jfree.chart3d.data.KeyedValues;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.plot.CategoryPlot3D;
 
 /**
  * A demo of a 3D line chart.
@@ -123,7 +122,7 @@ public class LineChart3DDemo1 extends JFrame {
      */
     private static CategoryDataset3D<String, String, String> createDataset() {
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
         dataset.addSeriesAsRow("Safari", createSafariData());
         dataset.addSeriesAsRow("Firefox", createFirefoxData());
         dataset.addSeriesAsRow("Internet Explorer", createInternetExplorerData());
@@ -132,8 +131,7 @@ public class LineChart3DDemo1 extends JFrame {
     }
 
     private static KeyedValues<String, Double> createChromeData() {
-        DefaultKeyedValues<String, Double> series 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> series = new DefaultKeyedValues<>();
         series.put("Nov-12", 0.3697);
         series.put("Dec-12", 0.3782);
         series.put("Jan-13", 0.3808);
@@ -174,8 +172,7 @@ public class LineChart3DDemo1 extends JFrame {
     }
 
     private static KeyedValues<String, Double> createFirefoxData() {
-        DefaultKeyedValues<String, Double> series 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> series = new DefaultKeyedValues<>();
         series.put("Nov-12", 0.2324);
         series.put("Dec-12", 0.2284);
         series.put("Jan-13", 0.2247);
@@ -216,8 +213,7 @@ public class LineChart3DDemo1 extends JFrame {
     }
 
     private static KeyedValues<String, Double> createInternetExplorerData() {
-        DefaultKeyedValues<String, Double> series 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> series = new DefaultKeyedValues<>();
         series.put("Nov-12", 0.3246);
         series.put("Dec-12", 0.3214);
         series.put("Jan-13", 0.3225);
@@ -258,8 +254,7 @@ public class LineChart3DDemo1 extends JFrame {
     }
 
     private static KeyedValues<String, Double> createSafariData() {
-        DefaultKeyedValues<String, Double> series 
-                = new DefaultKeyedValues<String, Double>();
+        DefaultKeyedValues<String, Double> series = new DefaultKeyedValues<>();
         series.put("Nov-12", 0.051);
         series.put("Dec-12", 0.0499);
         series.put("Jan-13", 0.0512);

@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -49,31 +49,31 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.axis.NumberAxis3D;
-import com.orsoncharts.data.xyz.XYZDataset;
-import com.orsoncharts.data.xyz.XYZItemKey;
-import com.orsoncharts.data.xyz.XYZSeries;
-import com.orsoncharts.data.xyz.XYZSeriesCollection;
-import com.orsoncharts.graphics2d.Anchor2D;
-import com.orsoncharts.graphics3d.Dimension3D;
-import com.orsoncharts.graphics3d.Object3D;
-import com.orsoncharts.graphics3d.RenderedElement;
-import com.orsoncharts.graphics3d.ViewPoint3D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.interaction.Chart3DMouseEvent;
-import com.orsoncharts.interaction.Chart3DMouseListener;
-import com.orsoncharts.interaction.StandardXYZDataItemSelection;
-import com.orsoncharts.interaction.XYZDataItemSelection;
-import com.orsoncharts.label.StandardXYZItemLabelGenerator;
-import com.orsoncharts.marker.RangeMarker;
-import com.orsoncharts.plot.XYZPlot;
-import com.orsoncharts.renderer.xyz.ScatterXYZRenderer;
-import com.orsoncharts.renderer.xyz.StandardXYZColorSource;
-import com.orsoncharts.style.ChartStyler;
-import com.orsoncharts.style.ChartStyles;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.axis.NumberAxis3D;
+import org.jfree.chart3d.data.xyz.XYZDataset;
+import org.jfree.chart3d.data.xyz.XYZItemKey;
+import org.jfree.chart3d.data.xyz.XYZSeries;
+import org.jfree.chart3d.data.xyz.XYZSeriesCollection;
+import org.jfree.chart3d.graphics2d.Anchor2D;
+import org.jfree.chart3d.graphics3d.Dimension3D;
+import org.jfree.chart3d.graphics3d.Object3D;
+import org.jfree.chart3d.graphics3d.RenderedElement;
+import org.jfree.chart3d.graphics3d.ViewPoint3D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.interaction.Chart3DMouseEvent;
+import org.jfree.chart3d.interaction.Chart3DMouseListener;
+import org.jfree.chart3d.interaction.StandardXYZDataItemSelection;
+import org.jfree.chart3d.interaction.XYZDataItemSelection;
+import org.jfree.chart3d.label.StandardXYZItemLabelGenerator;
+import org.jfree.chart3d.marker.RangeMarker;
+import org.jfree.chart3d.plot.XYZPlot;
+import org.jfree.chart3d.renderer.xyz.ScatterXYZRenderer;
+import org.jfree.chart3d.renderer.xyz.StandardXYZColorSource;
+import org.jfree.chart3d.style.ChartStyler;
+import org.jfree.chart3d.style.ChartStyles;
 
 /**
  * A demonstration of range markers on the axes.

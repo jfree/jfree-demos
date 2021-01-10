@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  *
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -42,22 +42,22 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import com.orsoncharts.Chart3DPanel;
-import com.orsoncharts.Chart3D;
-import com.orsoncharts.Chart3DFactory;
-import com.orsoncharts.Colors;
-import com.orsoncharts.axis.LabelOrientation;
-import com.orsoncharts.axis.StandardCategoryAxis3D;
-import com.orsoncharts.data.category.CategoryDataset3D;
-import com.orsoncharts.data.category.StandardCategoryDataset3D;
-import com.orsoncharts.graphics2d.Fit2D;
-import com.orsoncharts.graphics3d.swing.DisplayPanel3D;
-import com.orsoncharts.label.StandardCategoryItemLabelGenerator;
-import com.orsoncharts.label.StandardCategoryLabelGenerator;
-import com.orsoncharts.plot.CategoryPlot3D;
-import com.orsoncharts.renderer.category.StackedBarRenderer3D;
-import com.orsoncharts.table.RectanglePainter;
-import com.orsoncharts.table.StandardRectanglePainter;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DFactory;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.Colors;
+import org.jfree.chart3d.axis.LabelOrientation;
+import org.jfree.chart3d.axis.StandardCategoryAxis3D;
+import org.jfree.chart3d.data.category.CategoryDataset3D;
+import org.jfree.chart3d.data.category.StandardCategoryDataset3D;
+import org.jfree.chart3d.graphics2d.Fit2D;
+import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
+import org.jfree.chart3d.label.StandardCategoryItemLabelGenerator;
+import org.jfree.chart3d.label.StandardCategoryLabelGenerator;
+import org.jfree.chart3d.plot.CategoryPlot3D;
+import org.jfree.chart3d.renderer.category.StackedBarRenderer3D;
+import org.jfree.chart3d.table.RectanglePainter;
+import org.jfree.chart3d.table.StandardRectanglePainter;
 
 /**
  * A demo of a 3D stacked bar chart.

@@ -47,19 +47,19 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
-            <version>1.6.0-snapshot</version>
+            <version>1.5.2</version>
         </dependency>
         
         <dependency>
-            <groupId>com.object-refinery</groupId>
-            <artifactId>orsoncharts</artifactId>
-            <version>2.0-SNAPSHOT</version>
+            <groupId>org.jfree</groupId>
+            <artifactId>org.jfree.chart3d</artifactId>
+            <version>2.0</version>
         </dependency>
 
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.svg</artifactId>
-            <version>4.0</version>
+            <version>4.1</version>
         </dependency>
  
         <dependency>
@@ -86,7 +86,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
+                <version>3.2.0</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>

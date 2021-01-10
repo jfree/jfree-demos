@@ -2,7 +2,7 @@
  * Orson Charts - Demo
  * ===================
  * 
- * Copyright (c) 2013-2020, Object Refinery Limited.
+ * Copyright (c) 2013-2021, Object Refinery Limited.
  * All rights reserved.
  * 
  * http://www.object-refinery.com/orsoncharts/index.html
@@ -59,7 +59,7 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.MutableTreeNode;
 import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreePath;
-import com.orsoncharts.style.ChartStyle;
+import org.jfree.chart3d.style.ChartStyle;
 
 /**
  * A component that fits inside a tab and contains a JTree to select individual
