@@ -4,8 +4,8 @@ Various demo programs for [JFree](http://www.jfree.org) / [Object Refinery](http
 
 * [JFreeChart](https://github.com/jfree/jfreechart)
 * [JFreeSVG](https://github.com/jfree/jfreesvg)
+* [JFree PDF](https://github.com/jfree/jfreepdf)
 * [Orson Charts](https://github.com/jfree/orson-charts)
-* [Orson PDF](https://github.com/jfree/orsonpdf)
 
 A release version is tagged from time to time to make it easier to check out a version of the demo project that aligns to the library version(s) you are using.  See the table below:
 
