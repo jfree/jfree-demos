@@ -10,7 +10,7 @@
 
     <groupId>org.jfree</groupId>
     <artifactId>org.jfree.demos</artifactId>
-    <version>2.0</version>
+    <version>2.1</version>
     <packaging>jar</packaging>
 
     <organization>
@@ -20,7 +20,7 @@
     <inceptionYear>2017</inceptionYear>
 
     <description>
-        A collection of demos for projects at JFree and Object Refinery.
+        A collection of demos for projects at JFree.
     </description>
 
     <url>http://www.jfree.org/</url>
@@ -37,8 +37,6 @@
       <developer>
         <name>David Gilbert</name>
         <email>dave@jfree.org</email>
-        <organization>Object Refinery Limited</organization>
-        <organizationUrl>http://www.object-refinery.com</organizationUrl>
       </developer>
     </developers>
 

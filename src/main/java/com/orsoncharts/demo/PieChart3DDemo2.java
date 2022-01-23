@@ -13,7 +13,7 @@
  *   - Redistributions in binary form must reproduce the above copyright
  *     notice, this list of conditions and the following disclaimer in the
  *     documentation and/or other materials provided with the distribution.
- *   - Neither the name of the Object Refinery Limited nor the
+ *   - Neither the name of the JFree organisation nor the
  *     names of its contributors may be used to endorse or promote products
  *     derived from this software without specific prior written permission.
  *
@@ -107,7 +107,7 @@ public class PieChart3DDemo2 extends JFrame {
      */
     private static Chart3D createChart(PieDataset3D<String> dataset) {
         final Chart3D chart = Chart3DFactory.createPieChart("Orson Charts 3D", 
-            "For more info see: http://www.object-refinery.com/orsoncharts/", 
+            "For more info see: https://github.com/jfree/orson-charts/",
             dataset);
         chart.setTitleAnchor(TitleAnchor.TOP_LEFT);
         PiePlot3D plot = (PiePlot3D) chart.getPlot();

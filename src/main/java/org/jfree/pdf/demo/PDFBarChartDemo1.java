@@ -13,7 +13,7 @@
  *   - Redistributions in binary form must reproduce the above copyright
  *     notice, this list of conditions and the following disclaimer in the
  *     documentation and/or other materials provided with the distribution.
- *   - Neither the name of the Object Refinery Limited nor the
+ *   - Neither the name of the JFree organisation nor the
  *     names of its contributors may be used to endorse or promote products
  *     derived from this software without specific prior written permission.
  *
@@ -138,7 +138,7 @@ public class PDFBarChartDemo1 {
         JFreeChart chart = createChart(createDataset());
         PDFDocument pdfDoc = new PDFDocument();
         pdfDoc.setTitle("PDFBarChartDemo1");
-        pdfDoc.setAuthor("Object Refinery Limited");
+        pdfDoc.setAuthor("jfree.org");
         Page page = pdfDoc.createPage(new Rectangle(612, 468));
         PDFGraphics2D g2 = page.getGraphics2D();
         chart.draw(g2, new Rectangle(0, 0, 612, 468));
