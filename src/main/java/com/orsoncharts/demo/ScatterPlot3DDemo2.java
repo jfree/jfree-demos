@@ -69,7 +69,7 @@ public class ScatterPlot3DDemo2 extends JFrame {
 
     static class CustomDemoPanel extends DemoPanel implements ActionListener {
         
-        private JCheckBox checkBox;
+        private final JCheckBox checkBox;
         
         public CustomDemoPanel(LayoutManager layout) {
             super(layout);
@@ -153,17 +153,17 @@ public class ScatterPlot3DDemo2 extends JFrame {
      * @return A sample dataset.
      */
     public static XYZDataset<String> createDataset() {
-        XYZSeries<String> s1 = new XYZSeries<String>("S1");
+        XYZSeries<String> s1 = new XYZSeries<>("S1");
         for (int i = 0; i < 1000; i++) {
             s1.add(Math.random() * 100, Math.pow(10, Math.random() * 5), 
                     Math.random() * 100);
         }
-        XYZSeries<String> s2 = new XYZSeries<String>("S2");
+        XYZSeries<String> s2 = new XYZSeries<>("S2");
         for (int i = 0; i < 1000; i++) {
             s2.add(Math.random() * 100, Math.random() * 100000, 
                     Math.random() * 100);
         }
-        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
+        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<>();
         dataset.add(s1);
         dataset.add(s2);
         return dataset;

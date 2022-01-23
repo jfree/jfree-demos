@@ -67,9 +67,9 @@ public class AxisRangeDemo2 extends JFrame {
 
     static class CustomDemoPanel extends DemoPanel implements ChangeListener {
         
-        private JSlider slider1;
+        private final JSlider slider1;
         
-        private JSlider slider2;
+        private final JSlider slider2;
         
         public CustomDemoPanel(LayoutManager layout) {
             super(layout);

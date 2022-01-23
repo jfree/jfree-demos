@@ -92,12 +92,7 @@ public class SurfaceRendererDemo1 extends JFrame {
      * @return A surface chart. 
      */
     private static Chart3D createChart() {
-        Function3D function = new Function3D() {
-            @Override
-            public double getValue(double x, double z) {
-                return Math.cos(x) * Math.sin(z);
-            }
-        };
+        Function3D function = (x, z) -> Math.cos(x) * Math.sin(z);
         
         Chart3D chart = Chart3DFactory.createSurfaceChart(
                 "SurfaceRendererDemo1", 

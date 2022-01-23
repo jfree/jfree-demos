@@ -35,24 +35,17 @@
 
 package com.orsoncharts.demo;
 
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import org.jfree.chart3d.Chart3D;
-import org.jfree.chart3d.Chart3DFactory;
-import org.jfree.chart3d.Chart3DPanel;
-import org.jfree.chart3d.Colors;
-import org.jfree.chart3d.TitleAnchor;
+import org.jfree.chart3d.*;
 import org.jfree.chart3d.data.PieDataset3D;
 import org.jfree.chart3d.data.StandardPieDataset3D;
 import org.jfree.chart3d.graphics3d.swing.DisplayPanel3D;
 import org.jfree.chart3d.label.StandardPieLabelGenerator;
-import static org.jfree.chart3d.label.StandardPieLabelGenerator.PERCENT_TEMPLATE;
 import org.jfree.chart3d.plot.PiePlot3D;
+
+import javax.swing.*;
+import java.awt.*;
+
+import static org.jfree.chart3d.label.StandardPieLabelGenerator.PERCENT_TEMPLATE;
 
 /**
  * A demo of a pie chart.
@@ -78,13 +71,10 @@ public class PieChart3DDemo2 extends JFrame {
         chartPanel.zoomToFit(OrsonChartsDemo.DEFAULT_CONTENT_SIZE);
         content.add(new DisplayPanel3D(chartPanel));
         JButton button = new JButton("Change the Data");
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                PieDataset3D<String> dataset = createDataset();
-                PiePlot3D plot = (PiePlot3D) chart.getPlot();
-                plot.setDataset(dataset);
-            }
+        button.addActionListener(e -> {
+            PieDataset3D<String> dataset1 = createDataset();
+            PiePlot3D plot = (PiePlot3D) chart.getPlot();
+            plot.setDataset(dataset1);
         });
         content.add(button, BorderLayout.SOUTH);
         return content;

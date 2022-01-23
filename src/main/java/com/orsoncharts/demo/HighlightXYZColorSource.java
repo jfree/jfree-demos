@@ -47,19 +47,19 @@ import org.jfree.chart3d.renderer.xyz.XYZColorSource;
 @SuppressWarnings("serial")
 public class HighlightXYZColorSource extends StandardXYZColorSource {
     
-    private XYZDataset dataset;
+    private final XYZDataset dataset;
     
     /** The range of x-values for the highlight region. */
-    private Range xRange;
+    private final Range xRange;
     
     /** The range of y-values for the highlight region. */
-    private Range yRange;
+    private final Range yRange;
     
     /** The range of z-values for the highlight region. */
-    private Range zRange;
+    private final Range zRange;
     
     /** The highlight color. */
-    private Color highlightColor;
+    private final Color highlightColor;
     
     /**
      * Creates a new instance.

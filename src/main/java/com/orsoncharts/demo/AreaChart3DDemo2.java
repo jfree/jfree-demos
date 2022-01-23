@@ -54,7 +54,6 @@ import org.jfree.chart3d.renderer.category.AreaRenderer3D;
 /**
  * A demo of a 3D area chart.
  */
-@SuppressWarnings("serial")
 public class AreaChart3DDemo2 extends JFrame {
 
     /**
@@ -78,7 +77,7 @@ public class AreaChart3DDemo2 extends JFrame {
     public static JPanel createDemoPanel() {
         DemoPanel content = new DemoPanel(new BorderLayout());
         content.setPreferredSize(OrsonChartsDemo.DEFAULT_CONTENT_SIZE);
-        CategoryDataset3D dataset = createDataset();
+        CategoryDataset3D<String, String, String> dataset = createDataset();
         Chart3D chart = createChart(dataset);
         Chart3DPanel chartPanel = new Chart3DPanel(chart);
         content.setChartPanel(chartPanel);
@@ -94,7 +93,7 @@ public class AreaChart3DDemo2 extends JFrame {
      * 
      * @return An area chart. 
      */
-    private static Chart3D createChart(CategoryDataset3D dataset) {
+    private static Chart3D createChart(CategoryDataset3D<String, String, String> dataset) {
         Chart3D chart = Chart3DFactory.createAreaChart("AreaChart3DDemo2", 
                 "Chart created with Orson Charts", dataset, "Row", 
                 "Category", "Value");
@@ -116,7 +115,7 @@ public class AreaChart3DDemo2 extends JFrame {
      * 
      * @return A sample dataset.
      */
-    private static CategoryDataset3D createDataset() {    
+    private static CategoryDataset3D<String, String, String> createDataset() {
         StandardCategoryDataset3D<String, String, String> dataset 
                 = new StandardCategoryDataset3D<>();
                 

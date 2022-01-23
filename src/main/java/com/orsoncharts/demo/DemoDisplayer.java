@@ -47,9 +47,9 @@ import org.jfree.chart3d.Chart3DPanel;
 
 public class DemoDisplayer implements Runnable {
 
-    private OrsonChartsDemoComponent demoComp;
+    private final OrsonChartsDemoComponent demoComp;
 
-    private DemoDescription demoDescription;
+    private final DemoDescription demoDescription;
 
     /**
      * Creates a new runnable.
@@ -99,17 +99,8 @@ public class DemoDisplayer implements Runnable {
                 }
             }
         }
-        catch (ClassNotFoundException e1) {
+        catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e1) {
             e1.printStackTrace();
-        }
-        catch (NoSuchMethodException e2) {
-            e2.printStackTrace();
-        }
-        catch (InvocationTargetException e3) {
-            e3.printStackTrace();
-        }
-        catch (IllegalAccessException e4) {
-            e4.printStackTrace();
         }
 
     }

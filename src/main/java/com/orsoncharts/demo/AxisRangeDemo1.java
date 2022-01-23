@@ -68,9 +68,9 @@ public class AxisRangeDemo1 extends JFrame {
 
     static class CustomDemoPanel extends DemoPanel implements ChangeListener {
         
-        private JSlider slider1;
+        private final JSlider slider1;
         
-        private JSlider slider2;
+        private final JSlider slider2;
         
         public CustomDemoPanel(LayoutManager layout) {
             super(layout);
@@ -154,34 +154,30 @@ public class AxisRangeDemo1 extends JFrame {
     private static CategoryDataset3D<String, String, String> createDataset() {    
 
         StandardCategoryDataset3D<String, String, String> dataset 
-                = new StandardCategoryDataset3D<String, String, String>();
+                = new StandardCategoryDataset3D<>();
         
-        DefaultKeyedValues<String, Number> s0 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s0 = new DefaultKeyedValues<>();
         s0.put("A", -500);
         s0.put("B", -200);
         s0.put("C", -400);
         s0.put("D", -150);
         dataset.addSeriesAsRow("All Negative", s0);
         
-        DefaultKeyedValues<String, Number> s1 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s1 = new DefaultKeyedValues<>();
         s1.put("A", -500);
         s1.put("B", 500);
         s1.put("C", 0);
         s1.put("D", -150);
         dataset.addSeriesAsRow("Alternating 1", s1);
 
-        DefaultKeyedValues<String, Number> s2 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s2 = new DefaultKeyedValues<>();
         s2.put("A", 500);
         s2.put("B", -500);
         s2.put("C", 0);
         s2.put("D", 150);
         dataset.addSeriesAsRow("Alternating 2", s2);
 
-        DefaultKeyedValues<String, Number> s3 
-                = new DefaultKeyedValues<String, Number>();
+        DefaultKeyedValues<String, Number> s3 = new DefaultKeyedValues<>();
         s3.put("A", 500);
         s3.put("B", 200);
         s3.put("C", 400);

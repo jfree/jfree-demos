@@ -1,23 +1,16 @@
 package org.jfree.svg.demo;
 
-import java.awt.Color;
-import java.awt.GradientPaint;
-import java.awt.Graphics2D;
-import java.awt.LinearGradientPaint;
-import java.awt.MultipleGradientPaint;
+import org.jfree.svg.SVGGraphics2D;
+import org.jfree.svg.SVGUtils;
+
+import java.awt.*;
 import java.awt.MultipleGradientPaint.CycleMethod;
-import java.awt.RadialGradientPaint;
-import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Path2D;
 import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import javax.imageio.ImageIO;
-import org.jfree.svg.SVGGraphics2D;
-import org.jfree.svg.SVGUtils;
 
 /**
  *

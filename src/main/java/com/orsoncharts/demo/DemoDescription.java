@@ -40,11 +40,11 @@ package com.orsoncharts.demo;
  */
 public class DemoDescription {
 
-    private String className;
+    private final String className;
     
-    private String fileName;
+    private final String fileName;
     
-    private String descriptionFileName;
+    private final String descriptionFileName;
     
     /**
      * Creates a new description.

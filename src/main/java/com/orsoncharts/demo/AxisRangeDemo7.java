@@ -68,17 +68,17 @@ public class AxisRangeDemo7 extends JFrame {
 
     static class CustomDemoPanel extends DemoPanel implements ChangeListener {
         
-        private JSlider xslider1;
+        private final JSlider xslider1;
         
-        private JSlider xslider2;
+        private final JSlider xslider2;
         
-        private JSlider yslider1;
+        private final JSlider yslider1;
         
-        private JSlider yslider2;
+        private final JSlider yslider2;
 
-        private JSlider zslider1;
+        private final JSlider zslider1;
         
-        private JSlider zslider2;
+        private final JSlider zslider2;
 
         public CustomDemoPanel(LayoutManager layout, XYZDataset dataset) {
             super(layout);

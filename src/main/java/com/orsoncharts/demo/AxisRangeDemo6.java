@@ -66,17 +66,17 @@ public class AxisRangeDemo6 extends JFrame {
 
     static class CustomDemoPanel extends DemoPanel implements ChangeListener {
         
-        private JSlider xslider1;
+        private final JSlider xslider1;
         
-        private JSlider xslider2;
+        private final JSlider xslider2;
         
-        private JSlider yslider1;
+        private final JSlider yslider1;
         
-        private JSlider yslider2;
+        private final JSlider yslider2;
 
-        private JSlider zslider1;
+        private final JSlider zslider1;
         
-        private JSlider zslider2;
+        private final JSlider zslider2;
 
         public CustomDemoPanel(LayoutManager layout) {
             super(layout);
@@ -178,12 +178,7 @@ public class AxisRangeDemo6 extends JFrame {
     public static JPanel createDemoPanel() {
         DemoPanel content = new CustomDemoPanel(new BorderLayout());
         content.setPreferredSize(OrsonChartsDemo.DEFAULT_CONTENT_SIZE);
-        Function3D function = new Function3D() {
-            @Override
-            public double getValue(double x, double z) {
-                return Math.cos(x) * Math.sin(z);
-            }
-        };
+        Function3D function = (x, z) -> Math.cos(x) * Math.sin(z);
 
         Chart3D chart = Chart3DFactory.createSurfaceChart("AxisRangeDemo6", 
                 "Chart created with Orson Charts", function, "X", "Y", "Z");

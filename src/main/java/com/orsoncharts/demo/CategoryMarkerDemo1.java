@@ -82,7 +82,7 @@ public class CategoryMarkerDemo1 extends JFrame {
         
         private String selectedColumnKey;
         
-        private JCheckBox itemLabelCheckBox;
+        private final JCheckBox itemLabelCheckBox;
         
         public CustomDemoPanel(LayoutManager layout) {
             super(layout);

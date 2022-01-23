@@ -83,7 +83,7 @@ public class RangeMarkerDemo1 extends JFrame {
     static class CustomDemoPanel extends DemoPanel implements ActionListener,
             Chart3DMouseListener {
         
-        private JCheckBox checkBox;
+        private final JCheckBox checkBox;
         
         public CustomDemoPanel(LayoutManager layout) {
             super(layout);
@@ -239,7 +239,7 @@ public class RangeMarkerDemo1 extends JFrame {
         XYZSeries<String> s1 = createRandomSeries("S1", 10);
         XYZSeries<String> s2 = createRandomSeries("S2", 50);
         XYZSeries<String> s3 = createRandomSeries("S3", 150);
-        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<String>();
+        XYZSeriesCollection<String> dataset = new XYZSeriesCollection<>();
         dataset.add(s1);
         dataset.add(s2);
         dataset.add(s3);
@@ -247,7 +247,7 @@ public class RangeMarkerDemo1 extends JFrame {
     }
     
     private static XYZSeries<String> createRandomSeries(String name, int count) {
-        XYZSeries<String> s = new XYZSeries<String>(name);
+        XYZSeries<String> s = new XYZSeries<>(name);
         for (int i = 0; i < count; i++) {
             s.add(Math.random() * 100, Math.random() / 100, Math.random() * 100);
         }
