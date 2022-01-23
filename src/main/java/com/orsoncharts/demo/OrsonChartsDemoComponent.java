@@ -68,8 +68,7 @@ import org.jfree.chart3d.style.ChartStyle;
  * demo application).
  */
 @SuppressWarnings("serial")
-public class OrsonChartsDemoComponent extends JPanel 
-        implements TreeSelectionListener {
+public class OrsonChartsDemoComponent extends JPanel implements TreeSelectionListener {
     
     private static final String PREFIX = "com.orsoncharts.demo.";
     
@@ -284,7 +283,7 @@ public class OrsonChartsDemoComponent extends JPanel
      * Creates the panel that contains the chart and the chart description,
      * divided by a splitter.
      * 
-     * @return 
+     * @return A chart component.
      */
     private JComponent createChartComponent() {
         JSplitPane splitter = new JSplitPane(JSplitPane.VERTICAL_SPLIT);

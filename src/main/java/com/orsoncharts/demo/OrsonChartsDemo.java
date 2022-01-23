@@ -58,7 +58,7 @@ public class OrsonChartsDemo extends JFrame implements ActionListener {
     
     /** Default size for the content panel in the demo applications. */
     public static final Dimension DEFAULT_CONTENT_SIZE 
-            = new Dimension(1024, 768);
+            = new Dimension(892, 640);
     
     private OrsonChartsDemoComponent demoComponent;
 
