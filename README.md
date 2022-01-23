@@ -15,3 +15,4 @@ A release version is tagged from time to time to make it easier to check out a v
 | 1.1            | 1.5.0      | 3.3      |              |              |
 | 1.2            | 1.5.0      | 3.3      |              | 1.7          |
 | 2.0            | 1.5.2      | 4.2      | 2.0          | 2.0          |
+| 2.1            | 1.5.3      | 5.0.2    | 2.0          | 2.1.0        |

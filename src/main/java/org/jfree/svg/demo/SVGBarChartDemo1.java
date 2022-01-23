@@ -1,11 +1,10 @@
 /* =====================
  * SVGBarChartDemo1.java
  * =====================
- * 
- * Copyright (c) 2013-2021, Object Refinery Limited.
- * All rights reserved.
  *
- * http://www.jfree.org/jfreechart/index.html
+ * Copyright 2013-2022, by David Gilbert. All rights reserved.
+ *
+ * https://github.com/jfree/jfreesvg
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:

@@ -1,10 +1,10 @@
 /* =====================================================================
  * JFreePDF : a fast, light-weight PDF library for the Java(tm) platform
  * =====================================================================
- * 
- * (C)opyright 2013-2017, by Object Refinery Limited.  All rights reserved.
  *
- * Project Info:  http://www.object-refinery.com/orsonpdf/index.html
+ * Copyright 2013-2022, by David Gilbert. All rights reserved.
+ *
+ * https://github.com/jfree/jfreepdf
  * 
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:

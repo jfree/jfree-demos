@@ -1,10 +1,10 @@
 /* ======================
  * BufferedImageDemo.java
  * ======================
- * 
- * (C)opyright 2013-2017, by Object Refinery Limited.  All rights reserved.
  *
- * Project Info:  http://www.jfree.org/jfreesvg/index.html
+ * Copyright 2013-2022, by David Gilbert. All rights reserved.
+ *
+ * https://github.com/jfree/jfree-demos
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by

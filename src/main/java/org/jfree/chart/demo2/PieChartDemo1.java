@@ -2,9 +2,9 @@
  * PieChartDemo1.java
  * ==================
  *
- * (C) Copyright 2003-2021, by Object Refinery Limited.
+ * Copyright 2013-2022, by David Gilbert. All rights reserved.
  *
- * Project Info:  http://www.jfree.org/jfreechart/index.html
+ * https://github.com/jfree/jfree-demos
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
