@@ -1,11 +1,10 @@
 /* ===================
  * Orson Charts - Demo
  * ===================
- * 
- * Copyright (c) 2013-2021, Object Refinery Limited.
- * All rights reserved.
  *
- * http://www.object-refinery.com/orsoncharts/index.html
+ * Copyright 2013-2022, by David Gilbert. All rights reserved.
+ *
+ * https://github.com/jfree/jfree-demos
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -36,34 +35,19 @@
 
 package com.orsoncharts.demo;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dimension;
+import com.formdev.flatlaf.FlatLightLaf;
+import org.jfree.chart3d.Chart3D;
+import org.jfree.chart3d.Chart3DPanel;
+import org.jfree.chart3d.style.ChartStyle;
+import org.jfree.chart3d.style.ChartStyles;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.ButtonGroup;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
-import javax.swing.SwingUtilities;
-import javax.swing.JTextPane;
-import javax.swing.UIManager;
-import javax.swing.UIManager.LookAndFeelInfo;
-import org.jfree.chart3d.Chart3D;
-import org.jfree.chart3d.Chart3DPanel;
-import org.jfree.chart3d.style.ChartStyle;
-import org.jfree.chart3d.style.ChartStyles;
 
 /**
  * A demo application for Orson Charts.  This aggregates all the individual
@@ -74,7 +58,7 @@ public class OrsonChartsDemo extends JFrame implements ActionListener {
     
     /** Default size for the content panel in the demo applications. */
     public static final Dimension DEFAULT_CONTENT_SIZE 
-            = new Dimension(760, 480);
+            = new Dimension(1024, 768);
     
     private OrsonChartsDemoComponent demoComponent;
 
@@ -258,29 +242,11 @@ public class OrsonChartsDemo extends JFrame implements ActionListener {
      * @param args  ignored.
      */
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
-                    if ("Nimbus".equals(info.getName())) {
-                        try {
-                            UIManager.setLookAndFeel(info.getClassName());
-                        } catch (Exception ex) {
-                            try {
-                                UIManager.setLookAndFeel(
-                                        UIManager.getSystemLookAndFeelClassName());
-                            }
-                            catch (Exception e2) {
-                                // do nothing
-                            }
-                        }
-                    }
-                }
-                OrsonChartsDemo app = new OrsonChartsDemo("Orson Charts Demo 2.0");
-                app.pack();
-                app.setVisible(true);
-            }
-            
+        SwingUtilities.invokeLater(() -> {
+            FlatLightLaf.setup();
+            OrsonChartsDemo app = new OrsonChartsDemo("Orson Charts Demo 2.1");
+            app.pack();
+            app.setVisible(true);
         });
     }
    

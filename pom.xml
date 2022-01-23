@@ -47,24 +47,30 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
-            <version>1.5.2</version>
+            <version>1.5.3</version>
         </dependency>
         
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.chart3d</artifactId>
-            <version>2.0</version>
+            <version>2.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.svg</artifactId>
-            <version>4.2</version>
+            <version>5.0.2</version>
         </dependency>
  
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.pdf</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
             <version>2.0</version>
         </dependency>
     
@@ -84,7 +90,7 @@
                 <configuration>
                     <source>${project.source.level}</source>
                     <target>${project.target.level}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>                
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
             <plugin>
@@ -98,7 +104,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-		<version>3.2.0</version>
+                <version>3.2.0</version>
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -115,7 +121,7 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>make-assembly</id> 
+                        <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -130,7 +136,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
-		<version>3.0.0-M1</version>
+                <version>3.0.0-M1</version>
             </plugin>
         </plugins>
     </build>

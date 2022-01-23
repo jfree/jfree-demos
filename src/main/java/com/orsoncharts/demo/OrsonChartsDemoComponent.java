@@ -1,11 +1,10 @@
 /* ===================
  * Orson Charts - Demo
  * ===================
- * 
- * Copyright (c) 2013-2021, Object Refinery Limited.
- * All rights reserved.
- * 
- * http://www.object-refinery.com/orsoncharts/index.html
+ *
+ * Copyright 2013-2022, by David Gilbert. All rights reserved.
+ *
+ * https://github.com/jfree/jfree-demos
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -200,7 +199,10 @@ public class OrsonChartsDemoComponent extends JPanel
         n.add(createNode(PREFIX + "CategoryMarkerDemo1", 
                 "CategoryMarkerDemo1.java", 
                 ABOUT_PREFIX + "CategoryMarkerDemo1.html"));
-        n.add(createNode(PREFIX + "LineChart3DDemo1", 
+        n.add(createNode(PREFIX + "CategoryMarkerDemo2",
+                "CategoryMarkerDemo2.java",
+                ABOUT_PREFIX + "CategoryMarkerDemo2.html"));
+        n.add(createNode(PREFIX + "LineChart3DDemo1",
                 "LineChart3DDemo1.java", ABOUT_PREFIX + "LineChart3D1.html"));
         n.add(createNode(PREFIX + "LineChart3DDemo2", 
                 "LineChart3DDemo2.java", ABOUT_PREFIX + "LineChart3D2.html"));
