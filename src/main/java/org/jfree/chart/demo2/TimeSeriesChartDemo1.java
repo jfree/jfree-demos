@@ -30,7 +30,7 @@
  *
  */
 
-package org.jfree.chart.demo2;
+package test;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
