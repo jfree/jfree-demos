@@ -1,6 +1,6 @@
 # JFree Demos
 
-Various demo programs for [JFree](http://www.jfree.org) / [Object Refinery](http://www.object-refinery.com) projects, including:
+Various demo programs for [JFree](http://www.jfree.org) projects, including:
 
 * [JFreeChart](https://github.com/jfree/jfreechart)
 * [JFreeSVG](https://github.com/jfree/jfreesvg)
