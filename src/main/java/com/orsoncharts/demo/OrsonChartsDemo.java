@@ -53,7 +53,6 @@ import java.util.List;
  * A demo application for Orson Charts.  This aggregates all the individual
  * demos which can also be run independently.
  */
-@SuppressWarnings("serial")
 public class OrsonChartsDemo extends JFrame implements ActionListener {
     
     /** Default size for the content panel in the demo applications. */
@@ -244,7 +243,7 @@ public class OrsonChartsDemo extends JFrame implements ActionListener {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             FlatLightLaf.setup();
-            OrsonChartsDemo app = new OrsonChartsDemo("Orson Charts Demo 2.1");
+            OrsonChartsDemo app = new OrsonChartsDemo("Orson Charts Demo 2.2");
             app.pack();
             app.setVisible(true);
         });

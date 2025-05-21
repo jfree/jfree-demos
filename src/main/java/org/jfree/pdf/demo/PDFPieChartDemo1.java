@@ -64,17 +64,17 @@ public class PDFPieChartDemo1 {
     
     /**
      * Creates a sample dataset.
-     * 
+     * <p>
      * Source: http://www.bbc.co.uk/news/business-15489523
      *
      * @return A sample dataset.
      */
-    private static PieDataset createDataset() {
-        DefaultPieDataset dataset = new DefaultPieDataset();
-        dataset.setValue("Samsung", new Double(27.8));
-        dataset.setValue("Others", new Double(55.3));
-        dataset.setValue("Nokia", new Double(16.8));
-        dataset.setValue("Apple", new Double(17.1));
+    private static PieDataset<String> createDataset() {
+        DefaultPieDataset<String> dataset = new DefaultPieDataset<>();
+        dataset.setValue("Samsung", 27.8);
+        dataset.setValue("Others", 55.3);
+        dataset.setValue("Nokia", 16.8);
+        dataset.setValue("Apple", 17.1);
         return dataset;
     }
 
@@ -85,7 +85,7 @@ public class PDFPieChartDemo1 {
      *
      * @return A chart.
      */
-    private static JFreeChart createChart(PieDataset dataset) {
+    private static JFreeChart createChart(PieDataset<?> dataset) {
 
         JFreeChart chart = ChartFactory.createPieChart(
             "Smart Phones Manufactured / Q3 2011", dataset, false, false, 
@@ -116,7 +116,7 @@ public class PDFPieChartDemo1 {
         plot.setDefaultSectionOutlinePaint(Color.WHITE);
         plot.setSectionOutlinesVisible(true);
         BasicStroke bs = new BasicStroke(2.0f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_MITER, 1.0f);
-        plot.setDefaultSectionOutlineStroke(new BasicStroke(2.0f));
+        plot.setDefaultSectionOutlineStroke(bs);
 
         // customise the section label appearance
         plot.setLabelFont(new Font("Courier New", Font.BOLD, 20));
@@ -158,7 +158,7 @@ public class PDFPieChartDemo1 {
      * 
      * @param args  ignored.
      * 
-     * @throws IOException 
+     * @throws IOException if there is a problem creating the PDF file.
      */
     public static void main(String[] args) throws IOException {
         JFreeChart chart = createChart(createDataset());

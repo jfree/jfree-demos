@@ -88,12 +88,12 @@ public class PieChartDemo1 extends ApplicationFrame {
      *
      * @return A sample dataset.
      */
-    private static PieDataset createDataset() {
-        DefaultPieDataset dataset = new DefaultPieDataset();
-        dataset.setValue("Samsung", new Double(27.8));
-        dataset.setValue("Others", new Double(55.3));
-        dataset.setValue("Nokia", new Double(16.8));
-        dataset.setValue("Apple", new Double(17.1));
+    private static PieDataset<String> createDataset() {
+        DefaultPieDataset<String> dataset = new DefaultPieDataset<>();
+        dataset.setValue("Samsung", 27.8);
+        dataset.setValue("Others", 55.3);
+        dataset.setValue("Nokia", 16.8);
+        dataset.setValue("Apple", 17.1);
         return dataset;
     }
 
