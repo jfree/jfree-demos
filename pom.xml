@@ -10,12 +10,12 @@
 
     <groupId>org.jfree</groupId>
     <artifactId>org.jfree.demos</artifactId>
-    <version>2.1</version>
+    <version>2.2</version>
     <packaging>jar</packaging>
 
     <organization>
         <name>JFree.org</name>
-        <url>http://www.jfree.org/</url>
+        <url>https://www.jfree.org/</url>
     </organization>
     <inceptionYear>2017</inceptionYear>
 
@@ -23,7 +23,7 @@
         A collection of demos for projects at JFree.
     </description>
 
-    <url>http://www.jfree.org/</url>
+    <url>https://www.jfree.org/</url>
     <issueManagement>
         <url>https://github.com/jfree/jfree-demos/issues</url>
         <system>GitHub Issues</system>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>jfreechart</artifactId>
-            <version>1.5.5</version>
+            <version>1.5.6-SNAPSHOT</version>
         </dependency>
         
         <dependency>
@@ -57,19 +57,19 @@
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.svg</artifactId>
-            <version>5.0.6</version>
+            <version>5.0.7</version>
         </dependency>
  
         <dependency>
             <groupId>org.jfree</groupId>
             <artifactId>org.jfree.pdf</artifactId>
-            <version>2.0</version>
+            <version>2.0.1</version>
         </dependency>
 
         <dependency>
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf</artifactId>
-            <version>2.0</version>
+            <version>3.2.5</version>
         </dependency>
     
     </dependencies>
@@ -79,12 +79,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.4.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.0</version>
                 <configuration>
                     <source>${project.source.level}</source>
                     <target>${project.target.level}</target>
@@ -102,11 +102,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.4.1</version>
+                <version>3.4.2</version>
             </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.7.1</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
@@ -129,12 +129,12 @@
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.5.3</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.1.4</version>
             </plugin>
         </plugins>
     </build>
