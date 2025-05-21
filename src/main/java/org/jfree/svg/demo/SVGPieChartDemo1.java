@@ -72,12 +72,12 @@ public class SVGPieChartDemo1 {
      *
      * @return A sample dataset.
      */
-    private static PieDataset createDataset() {
-        DefaultPieDataset dataset = new DefaultPieDataset();
-        dataset.setValue("Samsung", new Double(27.8));
-        dataset.setValue("Others", new Double(55.3));
-        dataset.setValue("Nokia", new Double(16.8));
-        dataset.setValue("Apple", new Double(17.1));
+    private static PieDataset<String> createDataset() {
+        DefaultPieDataset<String> dataset = new DefaultPieDataset<>();
+        dataset.setValue("Samsung", 27.8);
+        dataset.setValue("Others", 55.3);
+        dataset.setValue("Nokia", 16.8);
+        dataset.setValue("Apple", 17.1);
         return dataset;
     }
 
@@ -88,7 +88,7 @@ public class SVGPieChartDemo1 {
      *
      * @return A chart.
      */
-    private static JFreeChart createChart(PieDataset dataset) {
+    private static JFreeChart createChart(PieDataset<String> dataset) {
 
         JFreeChart chart = ChartFactory.createPieChart(
             "Smart Phones Manufactured / Q3 2011",  // chart title
@@ -159,7 +159,7 @@ public class SVGPieChartDemo1 {
      * 
      * @param args  ignored.
      * 
-     * @throws IOException 
+     * @throws IOException if there is a problem creating the SVG file.
      */
     public static void main(String[] args) throws IOException {
         JFreeChart chart = createChart(createDataset());
