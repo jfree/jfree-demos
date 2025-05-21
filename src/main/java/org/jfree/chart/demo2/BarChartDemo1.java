@@ -2,7 +2,7 @@
  * BarChartDemo1.java
  * ==================
  *
- * Copyright 2013-2022, by David Gilbert. All rights reserved.
+ * Copyright 2013-present, by David Gilbert. All rights reserved.
  *
  * https://github.com/jfree/jfree-demos
  *
